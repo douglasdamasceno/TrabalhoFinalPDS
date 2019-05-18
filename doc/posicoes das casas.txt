@@ -1,0 +1,121 @@
+Casa Posicao X : 1: 45 Posicao  Y 610
+Casa Posicao X : 2: 145 Posicao  Y 610
+Casa Posicao X : 3: 245 Posicao  Y 610
+Casa Posicao X : 4: 345 Posicao  Y 610
+Casa Posicao X : 5: 445 Posicao  Y 610
+Casa Posicao X : 6: 545 Posicao  Y 610
+Casa Posicao X : 7: 645 Posicao  Y 610
+Casa Posicao X : 8: 745 Posicao  Y 610
+Casa Posicao X : 9: 845 Posicao  Y 610
+Casa Posicao X : 10: 945 Posicao  Y 610
+
+Casa Posicao X : 20: 45 Posicao  Y 533.2
+Casa Posicao X : 19: 145 Posicao  Y 533.2
+Casa Posicao X : 18: 245 Posicao  Y 533.2
+Casa Posicao X : 17: 345 Posicao  Y 533.2
+Casa Posicao X : 16: 445 Posicao  Y 533.2
+Casa Posicao X : 15: 545 Posicao  Y 533.2
+Casa Posicao X : 14: 645 Posicao  Y 533.2
+Casa Posicao X : 13: 745 Posicao  Y 533.2
+Casa Posicao X : 12: 845 Posicao  Y 533.2
+Casa Posicao X : 11: 945 Posicao  Y 533.2
+
+Casa Posicao X : 21: 45 Posicao   Y 464.4
+Casa Posicao X : 22: 145 Posicao  Y 464.4
+Casa Posicao X : 23: 245 Posicao  Y 464.4
+Casa Posicao X : 24: 345 Posicao  Y 464.4
+Casa Posicao X : 25: 445 Posicao  Y 464.4
+Casa Posicao X : 26: 545 Posicao  Y 464.4
+Casa Posicao X : 27: 645 Posicao  Y 464.4
+Casa Posicao X : 28: 745 Posicao  Y 464.4
+Casa Posicao X : 29: 845 Posicao  Y 464.4
+Casa Posicao X : 30: 945 Posicao  Y 464.4
+
+Casa Posicao X : 40: 45 Posicao   Y 395.6
+Casa Posicao X : 39: 145 Posicao  Y 395.6
+Casa Posicao X : 38: 245 Posicao  Y 395.6
+Casa Posicao X : 37: 345 Posicao  Y 395.6
+Casa Posicao X : 36: 445 Posicao  Y 395.6
+Casa Posicao X : 35: 545 Posicao  Y 395.6
+Casa Posicao X : 34: 645 Posicao  Y 395.6
+Casa Posicao X : 33: 745 Posicao  Y 395.6
+Casa Posicao X : 32: 845 Posicao  Y 395.6
+Casa Posicao X : 31: 945 Posicao  Y 395.6
+
+Casa Posicao X : 41: 45 Posicao   Y 326.8
+Casa Posicao X : 42: 145 Posicao  Y 326.8
+Casa Posicao X : 43: 245 Posicao  Y 326.8
+Casa Posicao X : 44: 345 Posicao  Y 326.8
+Casa Posicao X : 45: 445 Posicao  Y 326.8
+Casa Posicao X : 46: 545 Posicao  Y 326.8
+Casa Posicao X : 47: 645 Posicao  Y 326.8
+Casa Posicao X : 48: 745 Posicao  Y 326.8
+Casa Posicao X : 49: 845 Posicao  Y 326.8
+Casa Posicao X : 50: 945 Posicao  Y 326.8
+
+Casa Posicao X : 60: 45 Posicao   Y 258
+Casa Posicao X : 59: 145 Posicao  Y 258
+Casa Posicao X : 58: 245 Posicao  Y 258
+Casa Posicao X : 57: 345 Posicao  Y 258
+Casa Posicao X : 56: 445 Posicao  Y 258
+Casa Posicao X : 55: 545 Posicao  Y 258
+Casa Posicao X : 54: 645 Posicao  Y 258
+Casa Posicao X : 53: 745 Posicao  Y 258
+Casa Posicao X : 52: 845 Posicao  Y 258
+Casa Posicao X : 51: 945 Posicao  Y 258
+
+Casa Posicao X : 61: 45 Posicao   Y 189.2
+Casa Posicao X : 62: 145 Posicao  Y 189.2
+Casa Posicao X : 63: 245 Posicao  Y 189.2
+Casa Posicao X : 64: 345 Posicao  Y 189.2
+Casa Posicao X : 65: 445 Posicao  Y 189.2
+Casa Posicao X : 66: 545 Posicao  Y 189.2
+Casa Posicao X : 67: 645 Posicao  Y 189.2
+Casa Posicao X : 68: 745 Posicao  Y 189.2
+Casa Posicao X : 69: 845 Posicao  Y 189.2
+Casa Posicao X : 70: 945 Posicao  Y 189.2
+
+Casa Posicao X : 80: 45 Posicao   Y 120.4
+Casa Posicao X : 79: 145 Posicao  Y 120.4
+Casa Posicao X : 78: 245 Posicao  Y 120.4
+Casa Posicao X : 77: 345 Posicao  Y 120.4
+Casa Posicao X : 76: 445 Posicao  Y 120.4
+Casa Posicao X : 75: 545 Posicao  Y 120.4
+Casa Posicao X : 74: 645 Posicao  Y 120.4
+Casa Posicao X : 73: 745 Posicao  Y 120.4
+Casa Posicao X : 72: 845 Posicao  Y 120.4
+Casa Posicao X : 71: 945 Posicao  Y 120.4
+
+Casa Posicao X : 81: 45 Posicao   Y 51.6
+Casa Posicao X : 82: 145 Posicao  Y 51.6
+Casa Posicao X : 83: 245 Posicao  Y 51.6
+Casa Posicao X : 84: 345 Posicao  Y 51.6
+Casa Posicao X : 85: 445 Posicao  Y 51.6
+Casa Posicao X : 86: 545 Posicao  Y 51.6
+Casa Posicao X : 87: 645 Posicao  Y 51.6
+Casa Posicao X : 88: 745 Posicao  Y 51.6
+Casa Posicao X : 89: 845 Posicao  Y 51.6
+Casa Posicao X : 90: 945 Posicao  Y 51.6
+
+Casa Posicao X : 100: 45 Posicao   Y -17.2
+Casa Posicao X : 99: 145 Posicao  Y -17.2
+Casa Posicao X : 98: 245 Posicao  Y -17.2
+Casa Posicao X : 97: 345 Posicao  Y -17.2
+Casa Posicao X : 96: 445 Posicao  Y -17.2
+Casa Posicao X : 95: 545 Posicao  Y -17.2
+Casa Posicao X : 94: 645 Posicao  Y -17.2
+Casa Posicao X : 93: 745 Posicao  Y -17.2
+Casa Posicao X : 92: 845 Posicao  Y -17.2
+Casa Posicao X : 91: 945 Posicao  Y -17.2
+
+
+
+
+
+
+
+
+
+
+
+
