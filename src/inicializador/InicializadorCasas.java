@@ -11,7 +11,7 @@ public class InicializadorCasas {
 	private ArrayList<AbstractCasa> listaDeCasa;
 	
 	private InicializadorCasas() {
-		listaDeCasa = new ArrayList<>();
+		
 	}
 	
 	public static InicializadorCasas getInstance() {
@@ -20,7 +20,7 @@ public class InicializadorCasas {
         return inicializadorCasas;	
 	}
 	
-	void iniciarCasas(){
+	public ArrayList<AbstractCasa> iniciarCasas(){
 		int j =0;
 		for(int i=0;i<10;i++) {
 			listaDeCasa.add(new Casa((45 + (j*100) ),610,i+""));
@@ -37,5 +37,10 @@ public class InicializadorCasas {
 		j=0;
 		
 		
+		
+		
+		
+		
+		return listaDeCasa;
 	}
 }
