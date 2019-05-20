@@ -7,14 +7,15 @@ public class Peca{
 	private Sprite peca;
 	
 	private float velocidade;
-	private String casaAtual;
+	private int casaAtual;
 	
-	public Peca(String nomeDaImagem) {
-		this.peca = new Sprite(nomeDaImagem);
+	//receber id do jogador / jogador que metodo colocarPecaNoTabuleiro chamar draw
+	public Peca(int id) {
+		this.peca = new Sprite("recursos/sprite/peca"+id+".png");
 		this.peca.setPosition(40, 610);
-		this.peca.setDimension(50, 50);
+		this.peca.setDimension(60, 60);
 		this.velocidade = 4f;
-		this.casaAtual ="1";
+		this.casaAtual = 1;
 		this.peca.setVelocityX(velocidade);
 	}
 	
@@ -22,15 +23,15 @@ public class Peca{
 		this.peca.draw();
 	}
 	
-	public void moveHouse(int faceDado,AbstractCasa  casa) {
+	public void moveHouse(AbstractCasa  casa) {
 		if(this.getPosicaoX() <= casa.getPosicaoX() || this.getPosicaoY() <= casa.getPosicaoY()) {
 			peca.setPosition(casa.getPosicaoX(),casa.getPosicaoY());
-			this.casaAtual = casa.getNome();
+			this.casaAtual = Integer.parseInt(casa.getNome());
 		}
 	}
 	
 
-	public String getCasaAtual() {
+	public int getCasaAtual() {
 		return this.casaAtual;
 	}
 

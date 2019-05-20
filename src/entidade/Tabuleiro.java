@@ -22,6 +22,12 @@ public class Tabuleiro {
     }
 	//casa inicial
 	//casa final
+
+	public ArrayList<AbstractCasa> getListaDeCasas() {
+		return listaDeCasas;
+	}
+
+	
 	
 	
 	

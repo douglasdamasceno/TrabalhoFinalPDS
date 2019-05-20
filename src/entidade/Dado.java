@@ -16,9 +16,9 @@ public class Dado {
 		this.valorFace = valorFace;
 	}
 	
-	public void lancarDado() {
+	public int lancarDado() {
 		 Random random = new Random();
-	        this.valorFace = random.nextInt(qtdFaces)+1;
+	     return this.valorFace = random.nextInt(qtdFaces)+1;
 	}
 	
 }
