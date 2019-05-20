@@ -20,9 +20,6 @@ public class TelaJogo {
 		GameImage backGround = new GameImage("recursos/serpentes2.png");
 		
 		
-		float proximoCasaX = 445;
-		
-		float proximaCasaY = 533.2f;
 		//vermelha
 		Color cor = new Color(255,0, 0);
 		Color cor2 = new Color(0,255, 0);

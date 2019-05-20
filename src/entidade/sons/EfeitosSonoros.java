@@ -1,4 +1,4 @@
-package entidade.som;
+package entidade.sons;
 
 import JGamePlay.Sound;
 

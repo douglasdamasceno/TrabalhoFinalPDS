@@ -1,7 +1,7 @@
 package controladores;
 
 import JGamePlay.Sound;
-import entidade.som.EfeitosSonoros;
+import entidade.sons.EfeitosSonoros;
 
 public class ControladorGameSom {
 	private EfeitosSonoros efeitosSonoros;

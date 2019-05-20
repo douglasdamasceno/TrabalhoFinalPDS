@@ -1,7 +1,7 @@
 package fabrica;
 
-import entidade.Casa;
 import entidades.casas.AbstractCasa;
+import entidades.casas.Casa;
 import interfaces.AbstractFabrica;
 
 public class FabricaCasa implements AbstractFabrica{

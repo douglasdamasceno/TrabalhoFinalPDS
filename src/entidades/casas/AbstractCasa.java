@@ -2,14 +2,13 @@ package entidades.casas;
 
 import JGamePlay.Sprite;
 
-public class AbstractCasa {
+public abstract class AbstractCasa {
 	private Sprite casaSprite;
 	private float posicaoX;
 	private float posicaoY;
 	private String nome;
 	
 	public AbstractCasa(float posicaoX, float posicaoY, String nome) {
-		super();
 		this.posicaoX = posicaoX;
 		this.posicaoY = posicaoY;
 		this.nome = nome;

@@ -2,8 +2,8 @@ package inicializador;
 
 import java.util.ArrayList;
 
-import entidade.Casa;
 import entidades.casas.AbstractCasa;
+import entidades.casas.Casa;
 
 public class InicializadorCasas {
 	

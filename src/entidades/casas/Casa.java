@@ -1,6 +1,4 @@
-package entidade;
-
-import entidades.casas.AbstractCasa;
+package entidades.casas;
 
 public class Casa extends AbstractCasa{
 
