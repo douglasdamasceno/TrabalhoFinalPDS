@@ -14,7 +14,7 @@ public class ControladorJogo {
 	
 	public void criarJogador(ArrayList<String> nomeDoJogador,int qtdJogadores) {
 		if(!nomeDoJogador.isEmpty()) {
-			jogo.criarJoogadores(nomeDoJogador,qtdJogadores);
+			jogo.criarJogadores(nomeDoJogador,qtdJogadores);
 		}
 	}
 }

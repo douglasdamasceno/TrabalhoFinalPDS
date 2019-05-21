@@ -20,7 +20,7 @@ public class Jogo {
 		contralarRodado = new ControladorRodada(this.listaJogadores);
 	}
 	
-	public void criarJoogadores(ArrayList<String> nomeDoJogador,int qtdJogadores) {
+	public void criarJogadores(ArrayList<String> nomeDoJogador,int qtdJogadores) {
 		listaJogadores = new Jogador[qtdJogadores];
 		int i=0;
 		while(i<qtdJogadores) {

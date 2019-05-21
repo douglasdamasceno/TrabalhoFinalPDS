@@ -25,6 +25,7 @@ public class Peca{
 	
 	public void moveHouse(AbstractCasa  casa) {
 		if(this.getPosicaoX() <= casa.getPosicaoX() || this.getPosicaoY() <= casa.getPosicaoY()) {
+			//instanceof
 			peca.setPosition(casa.getPosicaoX(),casa.getPosicaoY());
 			this.casaAtual = Integer.parseInt(casa.getNome());
 		}
@@ -49,6 +50,10 @@ public class Peca{
 
 	public Sprite getPeca() {
 		return peca;
+	}
+	//jogador chamar
+	public void setPosicao(float posicaoX,float posicaoY) {
+		peca.setPosition(posicaoX, posicaoY);
 	}
 
 	

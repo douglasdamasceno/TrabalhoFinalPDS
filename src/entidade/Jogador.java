@@ -1,6 +1,5 @@
 package entidade;
 
-import entidade.casas.AbstractCasa;
 
 public class Jogador {
 	private String nome;
@@ -49,5 +48,17 @@ public class Jogador {
 		//AbstractCasa casa = meuTabuleiro.getListaDeCasas().get(novaPosicao);
 		//this.minhaPeca.moveHouse(casa);
 	}
+	//casa chamar
+	public void moverPecaBonus(float posicaoX,float posicaoY) {
+		minhaPeca.setPosicao(posicaoX, posicaoY);
+	}
+	
+	public Peca getMinhaPeca() {
+		return minhaPeca;
+	}
+	
+//	public void setMinhaPeca(Peca minhaPeca) {
+//		this.minhaPeca = minhaPeca;
+//	}
 	
 }
