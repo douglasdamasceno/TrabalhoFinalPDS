@@ -2,9 +2,11 @@ package entidade;
 
 import java.util.ArrayList;
 
-public class Jogo {
-	
+import controladores.ControladorRodada;
 
+public class Jogo {
+	//guardar o jogadorAtual da rodada para informar para TelaTabuleiro
+	private ControladorRodada contralarRodado;
 	private static Jogo jogo;
 	Jogador[] listaJogadores;
 	//private Tabuleiro tabuleiro = Tabuleiro.getInstance();
@@ -15,7 +17,7 @@ public class Jogo {
         return jogo;
     }
 	private Jogo() {
-	
+		contralarRodado = new ControladorRodada(this.listaJogadores);
 	}
 	
 	public void criarJoogadores(ArrayList<String> nomeDoJogador,int qtdJogadores) {
@@ -27,4 +29,9 @@ public class Jogo {
 			i++;
 		}
 	}
+	
+	public void JogadoresRodada() {
+		//aqui vai ter o while como no teste da main colocando ojogador para jogar.
+	}
+	
 }

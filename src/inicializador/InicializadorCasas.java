@@ -2,17 +2,16 @@ package inicializador;
 
 import java.util.ArrayList;
 
-import entidades.casas.AbstractCasa;
-import entidades.casas.Casa;
+import entidade.casas.AbstractCasa;
+import entidade.casas.Casa;
+import fabrica.FabricaCasa;
+import interfaces.AbstractFabrica;
 
 public class InicializadorCasas {
 	
 	private static InicializadorCasas inicializadorCasas;
+	private AbstractFabrica minhaFabrica;
 	private ArrayList<AbstractCasa> listaDeCasa;
-	
-	private InicializadorCasas() {
-		
-	}
 	
 	public static InicializadorCasas getInstance() {
 		if (inicializadorCasas == null)
@@ -20,27 +19,18 @@ public class InicializadorCasas {
         return inicializadorCasas;	
 	}
 	
+	private InicializadorCasas(){
+		listaDeCasa = new ArrayList<>();	
+		minhaFabrica = new FabricaCasa();
+    }
+	
 	public ArrayList<AbstractCasa> iniciarCasas(){
-		int j =0;
-		for(int i=0;i<10;i++) {
-			listaDeCasa.add(new Casa((45 + (j*100) ),610,i+""));
-			j++;
-		}
-		
-		j=0;
-		
-		for(int i=20;i>11;i--) {
-			listaDeCasa.add(new Casa((45 + (j*100) ),533.2f,i+""));
-			j++;
-		}
-		
-		j=0;
-		
-		
-		
-		
-		
 		
 		return listaDeCasa;
+	}
+	
+	public static void main(String[] args) {
+		InicializadorCasas IC = InicializadorCasas.getInstance();
+		IC.iniciarCasas();
 	}
 }

@@ -1,4 +1,4 @@
-package entidades.casas;
+package entidade.casas;
 
 public class Casa extends AbstractCasa{
 

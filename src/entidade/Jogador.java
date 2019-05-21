@@ -1,5 +1,6 @@
 package entidade;
 
+import entidade.casas.AbstractCasa;
 
 public class Jogador {
 	private String nome;
@@ -38,9 +39,13 @@ public class Jogador {
 	public void avancarPeca() {
 		int numero = this.lancarDados();
 		int novaPosicao = minhaPeca.getCasaAtual() + numero;
-		System.out.println("Posicao atual "+ minhaPeca.getCasaAtual());
+		System.out.println("---------------------------------------------------");
+		System.out.println("Posicao Inicial "+ minhaPeca.getCasaAtual());
+		minhaPeca.setCasaAtual(novaPosicao);
 		System.out.println("Numero aleatorio "+ numero);
 		System.out.println("Nova posicao " + novaPosicao);
+		System.out.println("Nova Posicao Atual: "+ minhaPeca.getCasaAtual());
+		System.out.println("------------------------------------------------------");
 		//AbstractCasa casa = meuTabuleiro.getListaDeCasas().get(novaPosicao);
 		//this.minhaPeca.moveHouse(casa);
 	}

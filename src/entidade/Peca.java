@@ -1,6 +1,6 @@
 package entidade;
 import JGamePlay.Sprite;
-import entidades.casas.AbstractCasa;
+import entidade.casas.AbstractCasa;
 
 public class Peca{
 	
@@ -12,7 +12,7 @@ public class Peca{
 	//receber id do jogador / jogador que metodo colocarPecaNoTabuleiro chamar draw
 	public Peca(int id) {
 		this.peca = new Sprite("recursos/sprite/peca"+id+".png");
-		this.peca.setPosition(40, 610);
+		this.peca.setPosition(40 + ((id-1)*10), 610);
 		this.peca.setDimension(60, 60);
 		this.velocidade = 4f;
 		this.casaAtual = 1;
@@ -34,7 +34,12 @@ public class Peca{
 	public int getCasaAtual() {
 		return this.casaAtual;
 	}
+	
+	public void setCasaAtual(int novaPosicao) {
+		this.casaAtual = novaPosicao;
+	}
 
+	
 	public float getPosicaoX() {
 		return (float) peca.getPosition().x;
 	}

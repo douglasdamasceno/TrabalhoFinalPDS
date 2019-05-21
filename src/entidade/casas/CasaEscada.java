@@ -1,4 +1,4 @@
-package entidades.casas;
+package entidade.casas;
 
 import entidade.Jogador;
 import interfaces.CasaEspecial;

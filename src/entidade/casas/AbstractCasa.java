@@ -1,9 +1,6 @@
-package entidades.casas;
-
-import JGamePlay.Sprite;
+package entidade.casas;
 
 public abstract class AbstractCasa {
-	private Sprite casaSprite;
 	private float posicaoX;
 	private float posicaoY;
 	private String nome;
@@ -12,9 +9,6 @@ public abstract class AbstractCasa {
 		this.posicaoX = posicaoX;
 		this.posicaoY = posicaoY;
 		this.nome = nome;
-		this.casaSprite = new Sprite("");
-		this.casaSprite.setPosition(posicaoX,posicaoY);
-		
 	}
 	public float getPosicaoX() {
 		return posicaoX;
