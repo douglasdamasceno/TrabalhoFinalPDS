@@ -1,12 +1,13 @@
 package entidade;
 
+import entidade.casas.AbstractCasa;
 
 public class Jogador {
 	private String nome;
 	private Peca minhaPeca;
 	private int idJogador;
 	private Dado dados;
-	//private Tabuleiro meuTabuleiro = Tabuleiro.getInstance();
+	private Tabuleiro meuTabuleiro = Tabuleiro.getInstance();
 	//tem que ter um tabuleiro para pegar a casa
 	
 	
@@ -45,8 +46,8 @@ public class Jogador {
 		System.out.println("Nova posicao " + novaPosicao);
 		System.out.println("Nova Posicao Atual: "+ minhaPeca.getCasaAtual());
 		System.out.println("------------------------------------------------------");
-		//AbstractCasa casa = meuTabuleiro.getListaDeCasas().get(novaPosicao);
-		//this.minhaPeca.moveHouse(casa);
+		AbstractCasa casa = meuTabuleiro.getListaDeCasas().get(novaPosicao);
+		this.minhaPeca.moveHouse(casa);
 	}
 	//casa chamar
 	public void moverPecaBonus(float posicaoX,float posicaoY) {

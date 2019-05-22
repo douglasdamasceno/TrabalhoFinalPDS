@@ -1,17 +1,16 @@
 package fronteiras;
 
 import java.awt.Color;
-import java.awt.Cursor;
 import java.awt.Font;
 
 import JGamePlay.GameImage;
 import JGamePlay.Keyboard;
-import JGamePlay.Sound;
 import JGamePlay.Sprite;
 import JGamePlay.Window;
-import entidade.Peca;
 
-public class TelaJogo {
+public class TelaTabuleiro {
+	
+	
 	public static void main(String[] args) {
 		Window janela = new Window(1190,1000);
 		

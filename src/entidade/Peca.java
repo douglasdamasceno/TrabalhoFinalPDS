@@ -9,7 +9,6 @@ public class Peca{
 	private float velocidade;
 	private int casaAtual;
 	
-	//receber id do jogador / jogador que metodo colocarPecaNoTabuleiro chamar draw
 	public Peca(int id) {
 		this.peca = new Sprite("recursos/sprite/peca"+id+".png");
 		this.peca.setPosition(40 + ((id-1)*10), 610);
@@ -25,7 +24,7 @@ public class Peca{
 	
 	public void moveHouse(AbstractCasa  casa) {
 		if(this.getPosicaoX() <= casa.getPosicaoX() || this.getPosicaoY() <= casa.getPosicaoY()) {
-			//instanceof
+			//instanceof será que é responsabilidade da peca isso e /ou casa fazer isso
 			peca.setPosition(casa.getPosicaoX(),casa.getPosicaoY());
 			this.casaAtual = Integer.parseInt(casa.getNome());
 		}
