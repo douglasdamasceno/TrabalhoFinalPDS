@@ -26,8 +26,7 @@ public class Peca{
 	
 	public void moveHouse(AbstractCasa  casa) {
 		if(this.getPosicaoX() <= casa.getPosicaoX() || this.getPosicaoY() <= casa.getPosicaoY()) {
-			//instanceof será que é responsabilidade da peca isso e /ou casa fazer isso
-			if(casa instanceof CasaCobra || casa instanceof CasaEscada) {
+			if(casa instanceof CasaEscada) {
 				CasaEscada casaE  = (CasaEscada.class).cast(casa);
 				casaE.executarAcao(peca);
 			}else {

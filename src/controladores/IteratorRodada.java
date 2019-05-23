@@ -4,12 +4,12 @@ package controladores;
 import entidade.Jogador;
 import interfaces.IteratorJogador;
 
-public class ControladorRodada implements IteratorJogador{
+public class IteratorRodada implements IteratorJogador{
 	
 	private Jogador[] listaJogadores;
 	private int posicao;
 	
-	public ControladorRodada(Jogador[] listaJogadores) {
+	public IteratorRodada(Jogador[] listaJogadores) {
 		this.listaJogadores = listaJogadores;
 		posicao = 0;
 	}

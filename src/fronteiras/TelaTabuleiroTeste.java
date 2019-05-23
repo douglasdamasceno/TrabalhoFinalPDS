@@ -12,7 +12,7 @@ import entidade.Peca;
 import entidade.Tabuleiro;
 import entidade.casas.AbstractCasa;
 
-public class TelaTabuleiro {
+public class TelaTabuleiroTeste {
 	
 	
 	public static void main(String[] args) {
@@ -39,20 +39,19 @@ public class TelaTabuleiro {
 		dado.setDimension(100, 100);
 		
 		Jogador j1 = new Jogador("Douglas", 1);
-		Jogador j2 = new Jogador("Douglas", 1);
+		Jogador j2 = new Jogador("Jose", 2);
 		
 		backGround.draw();
 		dado.draw();
 		int no =0;
 		int posica =1;
 		Tabuleiro tabu = Tabuleiro.getInstance();
-		Peca peca1 = new Peca(2);
+		//Peca peca1 = new Peca(2);
 		boolean executando = true;
 		while (executando) {
 			
 			backGround.draw();
 			dado.draw();
-			peca1.draw();
 			
 			janela.drawText("A VEZ É DO P1",1050, 30, cor,fonte3);
 			janela.drawText(j1.getNome(),1050, 60, cor,fonte2);
@@ -60,14 +59,20 @@ public class TelaTabuleiro {
 			janela.drawText("Posicao Atual: : "+posica,1050, 120, cor2,fonte2);
 			
 			
-			
+			j2.colocarPecaNoTabuleiro();
 			j1.colocarPecaNoTabuleiro();
+			
 			if(key.keyDown(Keyboard.SPACE_KEY)) {
 				 no = j1.avancarPeca();
+				 j1.colocarPecaNoTabuleiro();
 				 posica = j1.getMinhaPeca().getCasaAtual();
 			}
 			
-			
+			if(key.keyDown(Keyboard.RIGHT_KEY)) {
+				 no = j2.avancarPeca();
+				 j2.colocarPecaNoTabuleiro();
+				 posica = j2.getMinhaPeca().getCasaAtual();
+			}
 			if(key.keyDown(Keyboard.ESCAPE_KEY)) {
 				executando = false;
 			}	

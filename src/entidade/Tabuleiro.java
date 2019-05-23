@@ -4,11 +4,12 @@ import java.util.ArrayList;
 
 import entidade.casas.AbstractCasa;
 import inicializador.InicializadorCasas;
+import inicializador.InicializadorCasasOrdenado;
 
 public class Tabuleiro {
 	private static Tabuleiro tabuleiro;
 	private ArrayList<AbstractCasa> listaDeCasas;
-	private InicializadorCasas inicializadorCasas;
+	private InicializadorCasasOrdenado inicializadorCasas;
 	
 	
 	public static Tabuleiro getInstance(){
@@ -17,7 +18,7 @@ public class Tabuleiro {
     }
     
 	private Tabuleiro(){
-        this.inicializadorCasas = InicializadorCasas.getInstance();
+        this.inicializadorCasas = InicializadorCasasOrdenado.getInstance();
         listaDeCasas = inicializadorCasas.iniciarCasas();
     }
 	//casa inicial

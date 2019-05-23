@@ -2,11 +2,11 @@ package entidade;
 
 import java.util.ArrayList;
 
-import controladores.ControladorRodada;
+import controladores.IteratorRodada;
 
 public class Jogo {
 	//guardar o jogadorAtual da rodada para informar para TelaTabuleiro
-	private ControladorRodada contralarRodado;
+	private IteratorRodada contralarRodado;
 	private static Jogo jogo;
 	Jogador[] listaJogadores;
 	//private Tabuleiro tabuleiro = Tabuleiro.getInstance();
@@ -17,7 +17,7 @@ public class Jogo {
         return jogo;
     }
 	private Jogo() {
-		contralarRodado = new ControladorRodada(this.listaJogadores);
+		contralarRodado = new IteratorRodada(this.listaJogadores);
 	}
 	
 	public void criarJogadores(ArrayList<String> nomeDoJogador,int qtdJogadores) {

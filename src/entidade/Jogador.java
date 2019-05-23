@@ -44,14 +44,16 @@ public class Jogador {
 		System.out.println("Numero aleatorio "+ numero);
 		System.out.println("Nova posicao " + novaPosicao);
 		System.out.println("Nova Posicao Atual: "+ minhaPeca.getCasaAtual());
-		System.out.println("------------------------------------------------------");
-		
-		for (AbstractCasa casaBuscada : meuTabuleiro.getListaDeCasas()) {
-			if(casaBuscada.getNome()==novaPosicao) {
-				this.minhaPeca.moveHouse(casaBuscada);
-			}
+		AbstractCasa casaBuscada;
+		if(novaPosicao>=100) {
+			casaBuscada = meuTabuleiro.getListaDeCasas().get(99);
+			this.minhaPeca.moveHouse(casaBuscada);
+			return numero;
+		}else {
+			casaBuscada = meuTabuleiro.getListaDeCasas().get(novaPosicao-1);
+			this.minhaPeca.moveHouse(casaBuscada);
+			return numero;
 		}
-		return numero;
 	}
 	
 	public void moverPecaBonus(float posicaoX,float posicaoY) {
@@ -62,8 +64,5 @@ public class Jogador {
 		return minhaPeca;
 	}
 	
-//	public void setMinhaPeca(Peca minhaPeca) {
-//		this.minhaPeca = minhaPeca;
-//	}
-	
+
 }

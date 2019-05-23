@@ -34,7 +34,7 @@ public class TesteMain {
 			
 			backGround.draw();
 			//pe.draw();
-			AbstractCasa casa =  IniCa.iniciarCasas().get(i);
+			//AbstractCasa casa =  IniCa.iniciarCasas().get(i);
 			//System.out.println(casa.getNome()+ " Tipo : "+ casa.getClass().getSimpleName());
 			
 			

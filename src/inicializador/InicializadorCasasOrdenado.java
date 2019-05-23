@@ -1,5 +1,6 @@
 package inicializador;
 
+
 import java.util.ArrayList;
 
 import entidade.casas.AbstractCasa;
@@ -7,19 +8,19 @@ import entidade.casas.Casa;
 import fabrica.FabricaCasa;
 import interfaces.AbstractFabrica;
 
-public class InicializadorCasas {
+public class InicializadorCasasOrdenado {
 	
-	private static InicializadorCasas inicializadorCasas;
+	private static InicializadorCasasOrdenado inicializadorCasas;
 	private AbstractFabrica minhaFabrica;
 	private ArrayList<AbstractCasa> listaDeCasa;
 	
-	public static InicializadorCasas getInstance() {
+	public static InicializadorCasasOrdenado getInstance() {
 		if (inicializadorCasas == null)
-            inicializadorCasas = new InicializadorCasas();
+            inicializadorCasas = new InicializadorCasasOrdenado();
         return inicializadorCasas;	
 	}
 	
-	private InicializadorCasas(){
+	private InicializadorCasasOrdenado(){
 		listaDeCasa = new ArrayList<>();	
 		minhaFabrica = new FabricaCasa();
     }
@@ -39,13 +40,13 @@ public class InicializadorCasas {
 			i++;
 			countX++;
 		}
-		i= 20;
-		posicaoX =45;
+		i= 11;
+		posicaoX = 945;
 		countX =0;
-		while(i>=11) {
-			casa = minhaFabrica.criarCasa(i, posicaoX +(proximaCasaX * countX),543.2f , i);
+		while(i<=20) {
+			casa = minhaFabrica.criarCasa(i, posicaoX -(proximaCasaX * countX),543.2f , i);
 			listaDeCasa.add(casa);
-			i--;
+			i++;
 			countX++;
 		}
 		
@@ -59,13 +60,13 @@ public class InicializadorCasas {
 			countX++;
 		}
 		
-		i= 40;
-		posicaoX =45;
+		i= 31;
+		posicaoX =945;
 		countX =0;
-		while(i>=31) {
-			casa = minhaFabrica.criarCasa(i, posicaoX +(proximaCasaX * countX),415.6f , i);
+		while(i<=40) {
+			casa = minhaFabrica.criarCasa(i, posicaoX -(proximaCasaX * countX),415.6f , i);
 			listaDeCasa.add(casa);
-			i--;
+			i++;
 			countX++;
 		}
 		
@@ -80,13 +81,13 @@ public class InicializadorCasas {
 			countX++;
 		}
 		
-		i= 60;
-		posicaoX =45;
+		i= 51;
+		posicaoX =945;
 		countX =0;
-		while(i>=51) {
-			casa = minhaFabrica.criarCasa(i, posicaoX +(proximaCasaX * countX),278 , i);
+		while(i<=60) {
+			casa = minhaFabrica.criarCasa(i, posicaoX -(proximaCasaX * countX),278 , i);
 			listaDeCasa.add(casa);
-			i--;
+			i++;
 			countX++;
 		}
 		
@@ -102,13 +103,13 @@ public class InicializadorCasas {
 		}
 		
 		
-		i= 80;
-		posicaoX =45;
+		i= 71;
+		posicaoX = 945;
 		countX =0;
-		while(i>=71) {
-			casa = minhaFabrica.criarCasa(i, posicaoX +(proximaCasaX * countX),140.4f, i);
+		while(i<=80) {
+			casa = minhaFabrica.criarCasa(i, posicaoX -(proximaCasaX * countX),140.4f, i);
 			listaDeCasa.add(casa);
-			i--;
+			i++;
 			countX++;
 		}
 		
@@ -122,25 +123,18 @@ public class InicializadorCasas {
 			countX++;
 		}
 		
-		i= 100;
-		posicaoX =45;
+		i= 91;
+		posicaoX =945;
 		countX =0;
-		while(i>=91) {
-			casa = minhaFabrica.criarCasa(i, posicaoX +(proximaCasaX * countX), 7.2f, i);
+		while(i<=100) {
+			casa = minhaFabrica.criarCasa(i, posicaoX -(proximaCasaX * countX), 7.2f, i);
 			listaDeCasa.add(casa);
-			i--;
+			i++;
 			countX++;
 		}
-		for (AbstractCasa abstractCasa : listaDeCasa) {
-			System.out.println(abstractCasa.getNome() + abstractCasa.getClass().getSimpleName() +"X: " + abstractCasa.getPosicaoX() + "Y: "+abstractCasa.getPosicaoY());
-		}
+
 		return listaDeCasa;
 	}
 	
-	public static void main(String[] args) {
-		InicializadorCasas IC = InicializadorCasas.getInstance();
-		
-		IC.iniciarCasas();
-		
-	}
+	
 }

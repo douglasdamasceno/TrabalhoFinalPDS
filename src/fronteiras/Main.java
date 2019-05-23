@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import controladores.ControladorGameSom;
 import controladores.ControladorJogo;
-import controladores.ControladorRodada;
+import controladores.IteratorRodada;
 import entidade.Jogador;
 import entidade.Peca;
 
