@@ -7,6 +7,10 @@ import JGamePlay.GameImage;
 import JGamePlay.Keyboard;
 import JGamePlay.Sprite;
 import JGamePlay.Window;
+import entidade.Jogador;
+import entidade.Peca;
+import entidade.Tabuleiro;
+import entidade.casas.AbstractCasa;
 
 public class TelaTabuleiro {
 	
@@ -34,22 +38,36 @@ public class TelaTabuleiro {
 		dado.setPosition(1050, 120);
 		dado.setDimension(100, 100);
 		
+		Jogador j1 = new Jogador("Douglas", 1);
+		Jogador j2 = new Jogador("Douglas", 1);
 		
 		backGround.draw();
 		dado.draw();
-		
+		int no =0;
+		int posica =1;
+		Tabuleiro tabu = Tabuleiro.getInstance();
+		Peca peca1 = new Peca(2);
 		boolean executando = true;
 		while (executando) {
 			
 			backGround.draw();
 			dado.draw();
-			
+			peca1.draw();
 			
 			janela.drawText("A VEZ É DO P1",1050, 30, cor,fonte3);
-			janela.drawText("Game",1050, 60, cor,fonte2);
-			janela.drawText("CLICK NO DADO",1050, 90, cor2,fonte2);
+			janela.drawText(j1.getNome(),1050, 60, cor,fonte2);
+			janela.drawText("Valor do Dados: "+no,1050, 90, cor2,fonte2);
+			janela.drawText("Posicao Atual: : "+posica,1050, 120, cor2,fonte2);
 			
-				
+			
+			
+			j1.colocarPecaNoTabuleiro();
+			if(key.keyDown(Keyboard.SPACE_KEY)) {
+				 no = j1.avancarPeca();
+				 posica = j1.getMinhaPeca().getCasaAtual();
+			}
+			
+			
 			if(key.keyDown(Keyboard.ESCAPE_KEY)) {
 				executando = false;
 			}	

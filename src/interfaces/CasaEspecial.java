@@ -1,7 +1,7 @@
 package interfaces;
 
-import entidade.Jogador;
+import JGamePlay.Sprite;
 
 public interface CasaEspecial {
-	public void executarAcao(Jogador jogador);
+	public void executarAcao(Sprite peca);
 }

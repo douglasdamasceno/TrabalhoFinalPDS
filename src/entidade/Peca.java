@@ -1,6 +1,8 @@
 package entidade;
 import JGamePlay.Sprite;
 import entidade.casas.AbstractCasa;
+import entidade.casas.CasaCobra;
+import entidade.casas.CasaEscada;
 
 public class Peca{
 	
@@ -11,7 +13,7 @@ public class Peca{
 	
 	public Peca(int id) {
 		this.peca = new Sprite("recursos/sprite/peca"+id+".png");
-		this.peca.setPosition(40 + ((id-1)*10), 610);
+		this.peca.setPosition(45, 610);
 		this.peca.setDimension(60, 60);
 		this.velocidade = 4f;
 		this.casaAtual = 1;
@@ -25,8 +27,13 @@ public class Peca{
 	public void moveHouse(AbstractCasa  casa) {
 		if(this.getPosicaoX() <= casa.getPosicaoX() || this.getPosicaoY() <= casa.getPosicaoY()) {
 			//instanceof será que é responsabilidade da peca isso e /ou casa fazer isso
-			peca.setPosition(casa.getPosicaoX(),casa.getPosicaoY());
-			this.casaAtual = Integer.parseInt(casa.getNome());
+			if(casa instanceof CasaCobra || casa instanceof CasaEscada) {
+				CasaEscada casaE  = (CasaEscada.class).cast(casa);
+				casaE.executarAcao(peca);
+			}else {
+				peca.setPosition(casa.getPosicaoX(),casa.getPosicaoY());
+				this.casaAtual = casa.getNome();
+			}
 		}
 	}
 	

@@ -3,9 +3,9 @@ package entidade.casas;
 public abstract class AbstractCasa {
 	private float posicaoX;
 	private float posicaoY;
-	private String nome;
+	private int nome;
 	
-	public AbstractCasa(float posicaoX, float posicaoY, String nome) {
+	public AbstractCasa(float posicaoX, float posicaoY, int nome) {
 		this.posicaoX = posicaoX;
 		this.posicaoY = posicaoY;
 		this.nome = nome;
@@ -18,7 +18,7 @@ public abstract class AbstractCasa {
 		return posicaoY;
 	}
 	
-	public String getNome() {
+	public int getNome() {
 		return nome;
 	}
 	

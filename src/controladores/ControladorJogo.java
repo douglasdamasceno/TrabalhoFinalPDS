@@ -7,9 +7,17 @@ import entidade.Jogo;
 public class ControladorJogo {
 	
 	private Jogo jogo = Jogo.getInstance();
+	private static ControladorJogo controladorJogo;
 	
-	public ControladorJogo() {
+	
+	private ControladorJogo() {
 		
+	}
+	
+	public static ControladorJogo getInstance() {
+		if(controladorJogo==null)
+			return controladorJogo = new ControladorJogo();
+		return controladorJogo;
 	}
 	
 	public void criarJogador(ArrayList<String> nomeDoJogador,int qtdJogadores) {
@@ -17,4 +25,6 @@ public class ControladorJogo {
 			jogo.criarJogadores(nomeDoJogador,qtdJogadores);
 		}
 	}
+	
+	
 }

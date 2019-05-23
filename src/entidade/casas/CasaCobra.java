@@ -1,13 +1,13 @@
 package entidade.casas;
 
-import entidade.Jogador;
+import JGamePlay.Sprite;
 import interfaces.CasaEspecial;
 
 public class CasaCobra extends AbstractCasa implements CasaEspecial{
 	private float posicaoFinalX;
 	private float posicaoFinalY;
 	
-	public CasaCobra(float posicaoX, float posicaoY, String nome,float posicaoFinalX,float posicaoFinalY) {
+	public CasaCobra(float posicaoX, float posicaoY, int nome,float posicaoFinalX,float posicaoFinalY) {
 		super(posicaoX, posicaoY, nome);
 		this.posicaoFinalX = posicaoFinalX;
 		this.posicaoFinalY = posicaoFinalY;
@@ -15,8 +15,8 @@ public class CasaCobra extends AbstractCasa implements CasaEspecial{
 	}
 
 	@Override
-	public void executarAcao(Jogador jogador) {
-		jogador.moverPecaBonus(posicaoFinalX, posicaoFinalY);
+	public void executarAcao(Sprite peca) {
+		peca.setPosition(posicaoFinalX, posicaoFinalY);
 	}
 	
 	

@@ -2,7 +2,16 @@ package fronteiras;
 
 
 public class TelaInicial {
-	public TelaInicial() {
+	private static TelaInicial telaInicial;
+	
+	public static TelaInicial getInstance() {
+		if(telaInicial==null) {
+			telaInicial = new TelaInicial();
+		}
+		return telaInicial;
+	}
+	
+	private TelaInicial() {
 		criarJanela();
 	}
 	

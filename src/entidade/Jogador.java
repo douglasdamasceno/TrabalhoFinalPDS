@@ -34,9 +34,8 @@ public class Jogador {
 	public int lancarDados() {
 		return this.dados.lancarDado();
 	}
-	//chamar o move house
-	//somar a posicao atual com o valor do dados e busca esse valor no meuTabuleiro
-	public void avancarPeca() {
+	
+	public int avancarPeca() {
 		int numero = this.lancarDados();
 		int novaPosicao = minhaPeca.getCasaAtual() + numero;
 		System.out.println("---------------------------------------------------");
@@ -46,10 +45,15 @@ public class Jogador {
 		System.out.println("Nova posicao " + novaPosicao);
 		System.out.println("Nova Posicao Atual: "+ minhaPeca.getCasaAtual());
 		System.out.println("------------------------------------------------------");
-		AbstractCasa casa = meuTabuleiro.getListaDeCasas().get(novaPosicao);
-		this.minhaPeca.moveHouse(casa);
+		
+		for (AbstractCasa casaBuscada : meuTabuleiro.getListaDeCasas()) {
+			if(casaBuscada.getNome()==novaPosicao) {
+				this.minhaPeca.moveHouse(casaBuscada);
+			}
+		}
+		return numero;
 	}
-	//casa chamar
+	
 	public void moverPecaBonus(float posicaoX,float posicaoY) {
 		minhaPeca.setPosicao(posicaoX, posicaoY);
 	}

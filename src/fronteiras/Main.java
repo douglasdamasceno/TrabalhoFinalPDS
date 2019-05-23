@@ -54,14 +54,12 @@ public class Main {
 		listaJ.add("P4");
 		
 		
-		ControladorJogo ContrJogo = new ControladorJogo();
 		
 		//ContrJogo.criarJogador(listaJ, 4);
 		
 		//j1.avancarPeca();
 		//j1.colocarPecaNoTabuleiro();
 		
-		Peca p = new Peca(2);
 		
 	}
 

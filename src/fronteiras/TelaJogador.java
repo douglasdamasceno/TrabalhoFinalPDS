@@ -6,11 +6,10 @@ import controladores.ControladorJogo;
 
 public class TelaJogador {
 	private int qtdJogadores;
-	private ControladorJogo controlerJogador;
+	private ControladorJogo controlerJogador = ControladorJogo.getInstance();
 	
 	public TelaJogador(int qddJogadores) {
 		this.qtdJogadores =qddJogadores;
-		controlerJogador = new ControladorJogo();
 	}
 	
 	void pegarNomesJogadores() {

@@ -7,6 +7,7 @@ import JGamePlay.Window;
 import entidade.Jogador;
 import entidade.Peca;
 import entidade.casas.AbstractCasa;
+import entidade.casas.Casa;
 import inicializador.InicializadorCasas;
 
 public class TesteMain {
@@ -16,34 +17,40 @@ public class TesteMain {
 		
 		GameImage backGround = new GameImage("recursos/serpentes2.png");
 		
-		Peca pe = new Peca(1);
+		//Peca pe = new Peca(1);
 		Jogador j1 =  new Jogador("Jose",1);
 		Jogador j2 =  new Jogador("Maria",2);
 		
-		//InicializadorCasas IniCa = InicializadorCasas.getInstance();
+		InicializadorCasas IniCa = InicializadorCasas.getInstance();
 		
-		//ArrayList<AbstractCasa> listaDeCasa = IniCa.iniciarCasas();
-		
-		//for (AbstractCasa abstractCasa : listaDeCasa) {
-		//	System.out.println(abstractCasa.getNome());
-		//}
-		
-		while (true) {
+//		ArrayList<AbstractCasa> listaDeCasa = IniCa.iniciarCasas();
+//		
+//		for (AbstractCasa abstractCasa : listaDeCasa) {
+//		System.out.println(abstractCasa.getNome());
+//		}
+		int i =0;
+		int j =0;
+		while (i==1) {
 			
 			backGround.draw();
+			//pe.draw();
+			AbstractCasa casa =  IniCa.iniciarCasas().get(i);
+			//System.out.println(casa.getNome()+ " Tipo : "+ casa.getClass().getSimpleName());
+			
 			
 			j1.colocarPecaNoTabuleiro();
-			j2.colocarPecaNoTabuleiro();
-			j2.avancarPeca();
 			j1.avancarPeca();
-			j1.avancarPeca();
-			
-			janela.display();
-			break;
-			
-			
-		}
 		
+			
+			i++;
+			janela.display();
+			
+			
+			
+			
+	
+		}
+		//janela.exit();
 	
 	
 	
