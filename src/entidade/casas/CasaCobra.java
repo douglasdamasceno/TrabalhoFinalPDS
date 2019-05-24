@@ -15,9 +15,11 @@ public class CasaCobra extends AbstractCasa implements CasaEspecial{
 	}
 
 	@Override
-	public void executarAcao(Sprite peca) {
-		peca.setPosition(posicaoFinalX, posicaoFinalY);
+	public void executarAcao(float posicaoX, float posicaoY) {
+		posicaoX = posicaoFinalX;
+		posicaoY = posicaoY;
 	}
+
 	
 	
 }

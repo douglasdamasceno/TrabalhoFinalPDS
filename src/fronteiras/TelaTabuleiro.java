@@ -7,8 +7,8 @@ import JGamePlay.GameImage;
 import JGamePlay.Keyboard;
 import JGamePlay.Window;
 
-public class TelaTabuleiroO {
-	private static TelaTabuleiroO telaTabuleiro;
+public class TelaTabuleiro {
+	private static TelaTabuleiro telaTabuleiro;
 	private Window janela;        
     private Keyboard keyBoard;                             
     private GameImage backGround;        
@@ -18,7 +18,7 @@ public class TelaTabuleiroO {
 	private Font fonte2;
 	private Font fonte3;
 	
-	private TelaTabuleiroO () {
+	private TelaTabuleiro () {
 		cor = new Color(255,0, 0);
 		cor2 = new Color(0,255, 0);
 		fonte = new Font("serif", Font.BOLD, 24);
@@ -27,15 +27,13 @@ public class TelaTabuleiroO {
 		janela = new Window(1190,1000);
 		keyBoard = janela.getKeyboard();
 		backGround = new GameImage("recursos/serpentes2.png");
-		
-		
-		
+
 	}
 	
 	
-	public static TelaTabuleiroO getInstance() {
+	public static TelaTabuleiro getInstance() {
 		if(telaTabuleiro==null)
-			return telaTabuleiro = new TelaTabuleiroO();
+			return telaTabuleiro = new TelaTabuleiro();
 		return telaTabuleiro;
 	}
 	

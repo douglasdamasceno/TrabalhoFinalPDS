@@ -21,15 +21,8 @@ public class Tabuleiro {
         this.inicializadorCasas = InicializadorCasasOrdenado.getInstance();
         listaDeCasas = inicializadorCasas.iniciarCasas();
     }
-	//casa inicial
-	//casa final
-
+	
 	public ArrayList<AbstractCasa> getListaDeCasas() {
 		return listaDeCasas;
 	}
-
-	
-	
-	
-	
 }

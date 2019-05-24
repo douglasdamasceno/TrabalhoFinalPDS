@@ -8,9 +8,7 @@ import JGamePlay.Keyboard;
 import JGamePlay.Sprite;
 import JGamePlay.Window;
 import entidade.Jogador;
-import entidade.Peca;
 import entidade.Tabuleiro;
-import entidade.casas.AbstractCasa;
 
 public class TelaTabuleiroTeste {
 	
@@ -46,7 +44,8 @@ public class TelaTabuleiroTeste {
 		int no =0;
 		int posica =1;
 		Tabuleiro tabu = Tabuleiro.getInstance();
-		//Peca peca1 = new Peca(2);
+		
+		
 		boolean executando = true;
 		while (executando) {
 			
@@ -66,19 +65,15 @@ public class TelaTabuleiroTeste {
 				 no = j1.avancarPeca();
 				 j1.colocarPecaNoTabuleiro();
 				 posica = j1.getMinhaPeca().getCasaAtual();
+				 janela.display();
+					
 			}
 			
-			if(key.keyDown(Keyboard.RIGHT_KEY)) {
-				 no = j2.avancarPeca();
-				 j2.colocarPecaNoTabuleiro();
-				 posica = j2.getMinhaPeca().getCasaAtual();
-			}
 			if(key.keyDown(Keyboard.ESCAPE_KEY)) {
 				executando = false;
-			}	
-				
-			janela.display();
+			}
 			
+			janela.display();
 		}
 			
 		janela.exit();

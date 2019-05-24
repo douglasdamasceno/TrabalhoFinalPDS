@@ -6,31 +6,24 @@ import entidade.casas.CasaEscada;
 
 public class Peca{
 	
-	private Sprite peca;
-	
-	private float velocidade;
 	private int casaAtual;
-	
+	private float posicaoX;
+	private float posicaoY;
 	public Peca(int id) {
-		this.peca = new Sprite("recursos/sprite/peca"+id+".png");
-		this.peca.setPosition(45, 610);
-		this.peca.setDimension(60, 60);
-		this.velocidade = 4f;
 		this.casaAtual = 1;
-		this.peca.setVelocityX(velocidade);
+		this.posicaoX = 45;
+		this.posicaoY = 610;
 	}
 	
-	public void draw() {
-		this.peca.draw();
-	}
 	
 	public void moveHouse(AbstractCasa  casa) {
 		if(this.getPosicaoX() <= casa.getPosicaoX() || this.getPosicaoY() <= casa.getPosicaoY()) {
 			if(casa instanceof CasaEscada) {
 				CasaEscada casaE  = (CasaEscada.class).cast(casa);
-				casaE.executarAcao(peca);
+				casaE.executarAcao(posicaoX,posicaoY);
 			}else {
-				peca.setPosition(casa.getPosicaoX(),casa.getPosicaoY());
+				posicaoX = casa.getPosicaoX();
+				posicaoY = casa.getPosicaoY();
 				this.casaAtual = casa.getNome();
 			}
 		}
@@ -40,25 +33,25 @@ public class Peca{
 	public int getCasaAtual() {
 		return this.casaAtual;
 	}
-	
-	public void setCasaAtual(int novaPosicao) {
-		this.casaAtual = novaPosicao;
-	}
 
-	
+
 	public float getPosicaoX() {
-		return (float) peca.getPosition().x;
-	}
-	public float getPosicaoY() {
-		return (float) peca.getPosition().y;
+		return posicaoX;
 	}
 
-	public Sprite getPeca() {
-		return peca;
+
+	public void setPosicaoX(float posicaoX) {
+		this.posicaoX = posicaoX;
 	}
-	//jogador chamar
-	public void setPosicao(float posicaoX,float posicaoY) {
-		peca.setPosition(posicaoX, posicaoY);
+
+
+	public float getPosicaoY() {
+		return posicaoY;
+	}
+
+
+	public void setPosicaoY(float posicaoY) {
+		this.posicaoY = posicaoY;
 	}
 
 	

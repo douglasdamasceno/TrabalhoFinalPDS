@@ -5,19 +5,19 @@ import java.util.ArrayList;
 import controladores.IteratorRodada;
 
 public class Jogo {
-	//guardar o jogadorAtual da rodada para informar para TelaTabuleiro
-	private IteratorRodada contralarRodado;
+	
+	private IteratorRodada controlarRodado;
 	private static Jogo jogo;
 	Jogador[] listaJogadores;
-	//private Tabuleiro tabuleiro = Tabuleiro.getInstance();
-	//sigleton
+	private Tabuleiro tabuleiro = Tabuleiro.getInstance();
 	
+	// o jogo que informar qual casa o jogador deve mover a peca.
 	public static Jogo getInstance(){
         if (jogo == null) jogo = new Jogo();
         return jogo;
     }
 	private Jogo() {
-		contralarRodado = new IteratorRodada(this.listaJogadores);
+		controlarRodado = new IteratorRodada(this.listaJogadores);
 	}
 	
 	public void criarJogadores(ArrayList<String> nomeDoJogador,int qtdJogadores) {
@@ -31,7 +31,10 @@ public class Jogo {
 	}
 	
 	public void JogadoresRodada() {
-		//aqui vai ter o while como no teste da main colocando ojogador para jogar.
+		 while (controlarRodado.existeProximoJogador()) {
+	         Jogador jogadorVez = controlarRodado.jogadorAtual();   
+	         System.out.println(jogadorVez.getNome());	
+	      }
 	}
 	
 }

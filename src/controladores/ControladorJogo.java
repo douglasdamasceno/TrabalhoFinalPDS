@@ -24,7 +24,11 @@ public class ControladorJogo {
 		if(!nomeDoJogador.isEmpty()) {
 			jogo.criarJogadores(nomeDoJogador,qtdJogadores);
 		}
+		JogadoresRodada();
 	}
 	
+	public void JogadoresRodada() {
+		jogo.JogadoresRodada();
+	}
 	
 }

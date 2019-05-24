@@ -8,7 +8,6 @@ public class Jogador {
 	private int idJogador;
 	private Dado dados;
 	private Tabuleiro meuTabuleiro = Tabuleiro.getInstance();
-	//tem que ter um tabuleiro para pegar a casa
 	
 	
 	public Jogador(String nome,int idJogador) {
@@ -28,7 +27,7 @@ public class Jogador {
 	}
 	
 	public void colocarPecaNoTabuleiro() {
-		this.minhaPeca.draw();
+		//this.minhaPeca.draw();
 	}
 	
 	public int lancarDados() {
@@ -40,7 +39,7 @@ public class Jogador {
 		int novaPosicao = minhaPeca.getCasaAtual() + numero;
 		System.out.println("---------------------------------------------------");
 		System.out.println("Posicao Inicial "+ minhaPeca.getCasaAtual());
-		minhaPeca.setCasaAtual(novaPosicao);
+		//minhaPeca.setCasaAtual(novaPosicao);
 		System.out.println("Numero aleatorio "+ numero);
 		System.out.println("Nova posicao " + novaPosicao);
 		System.out.println("Nova Posicao Atual: "+ minhaPeca.getCasaAtual());
@@ -56,9 +55,7 @@ public class Jogador {
 		}
 	}
 	
-	public void moverPecaBonus(float posicaoX,float posicaoY) {
-		minhaPeca.setPosicao(posicaoX, posicaoY);
-	}
+	
 	
 	public Peca getMinhaPeca() {
 		return minhaPeca;
