@@ -7,16 +7,15 @@ import controladores.IteratorRodada;
 public class Jogo {
 	
 	private IteratorRodada controlarRodado;
-	private static Jogo jogo;
+	//private static Jogo jogo;
 	Jogador[] listaJogadores;
-	private Tabuleiro tabuleiro = Tabuleiro.getInstance();
+	//private Tabuleiro tabuleiro = Tabuleiro.getInstance();
 	
-	// o jogo que informar qual casa o jogador deve mover a peca.
-	public static Jogo getInstance(){
-        if (jogo == null) jogo = new Jogo();
-        return jogo;
-    }
-	private Jogo() {
+//	public static Jogo getInstance(){
+//        if (jogo == null) jogo = new Jogo();
+//        return jogo;
+//    }
+	public Jogo() {
 		controlarRodado = new IteratorRodada(this.listaJogadores);
 	}
 	
@@ -27,6 +26,9 @@ public class Jogo {
 			Jogador jogador = new Jogador(nomeDoJogador.get(i),i+1 );
 			listaJogadores[i] = jogador;
 			i++;
+		}
+		for (Jogador string : listaJogadores) {
+			System.out.println(string.getNome());
 		}
 	}
 	

@@ -8,7 +8,7 @@ public interface IteratorJogador{
 	public Jogador proximoJogador();
 	public boolean existeProximoJogador();
 	public Jogador jogadorAtual();
-	
+	//public boolean addJogador(Jogador jogador);
 	
 	
 	

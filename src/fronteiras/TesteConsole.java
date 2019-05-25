@@ -7,7 +7,7 @@ public class TesteConsole {
 
 	private Scanner entrada;
 	public TesteConsole() {
-		
+		iniciarJogo();
 	}
 	
 	void iniciarJogo() {
@@ -29,7 +29,7 @@ public class TesteConsole {
 		if(valor==1) {
 			System.out.println("Não é possivel jogar com apenas 1 jogador");
 			qtdDeJogadores();
-		}else if(valor>=1 && valor<=4){
+		}else if(valor>1 && valor<=4){
 			informarNomes(valor);
 		}
 	

@@ -9,10 +9,12 @@ public class IteratorRodada implements IteratorJogador{
 	private Jogador[] listaJogadores;
 	private int posicao;
 	
+	
 	public IteratorRodada(Jogador[] listaJogadores) {
 		this.listaJogadores = listaJogadores;
 		posicao = 0;
 	}
+
 	
 	@Override
 	public Jogador primeiroJogador() {
