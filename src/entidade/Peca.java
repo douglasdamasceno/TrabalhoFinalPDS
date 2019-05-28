@@ -1,5 +1,4 @@
 package entidade;
-import JGamePlay.Sprite;
 import entidade.casas.AbstractCasa;
 import entidade.casas.CasaCobra;
 import entidade.casas.CasaEscada;
@@ -21,6 +20,12 @@ public class Peca{
 			if(casa instanceof CasaEscada) {
 				CasaEscada casaE  = (CasaEscada.class).cast(casa);
 				casaE.executarAcao(posicaoX,posicaoY);
+				
+				this.casaAtual = casa.getNome();
+			}else if(casa instanceof CasaCobra) {
+				CasaCobra casaC  = (CasaCobra.class).cast(casa);
+				casaC.executarAcao(posicaoX,posicaoY);
+				this.casaAtual = casa.getNome();
 			}else {
 				posicaoX = casa.getPosicaoX();
 				posicaoY = casa.getPosicaoY();
@@ -32,6 +37,9 @@ public class Peca{
 
 	public int getCasaAtual() {
 		return this.casaAtual;
+	}
+	public void setCasaAtual(int casa) {
+		this.casaAtual = casa;
 	}
 
 

@@ -6,37 +6,39 @@ import controladores.IteratorRodada;
 
 public class Jogo {
 	
-	private IteratorRodada controlarRodado;
-	//private static Jogo jogo;
-	Jogador[] listaJogadores;
-	//private Tabuleiro tabuleiro = Tabuleiro.getInstance();
+	private IteratorRodada iteratorRodado;
+	ArrayList<Jogador> listaDeJogadores;
+	private int CasaFinal;
+	private Tabuleiro tabuleiro = Tabuleiro.getInstance();
 	
-//	public static Jogo getInstance(){
-//        if (jogo == null) jogo = new Jogo();
-//        return jogo;
-//    }
 	public Jogo() {
-		controlarRodado = new IteratorRodada(this.listaJogadores);
+		listaDeJogadores = new ArrayList<Jogador>();
 	}
 	
-	public void criarJogadores(ArrayList<String> nomeDoJogador,int qtdJogadores) {
-		listaJogadores = new Jogador[qtdJogadores];
+	public boolean criarJogadores(ArrayList<String> nomeDoJogador,int qtdJogadores) {
 		int i=0;
 		while(i<qtdJogadores) {
 			Jogador jogador = new Jogador(nomeDoJogador.get(i),i+1 );
-			listaJogadores[i] = jogador;
+			listaDeJogadores.add(jogador);
 			i++;
 		}
-		for (Jogador string : listaJogadores) {
-			System.out.println(string.getNome());
-		}
+		iteratorRodado = new IteratorRodada(listaDeJogadores);
+		return true;
 	}
 	
 	public void JogadoresRodada() {
-		 while (controlarRodado.existeProximoJogador()) {
-	         Jogador jogadorVez = controlarRodado.jogadorAtual();   
+		
+		 while (iteratorRodado.existeProximoJogador()) {
+	         Jogador jogadorVez = iteratorRodado.proximoJogador();
 	         System.out.println(jogadorVez.getNome());	
-	      }
+	    //     i++;
+		 }
 	}
+
+	public ArrayList<Jogador> getListaDeJogadores() {
+		return listaDeJogadores;
+	}
+
+	
 	
 }

@@ -1,5 +1,6 @@
 package entidade;
 
+import JGamePlay.Sprite;
 import entidade.casas.AbstractCasa;
 
 public class Jogador {
@@ -7,6 +8,8 @@ public class Jogador {
 	private Peca minhaPeca;
 	private int idJogador;
 	private Dado dados;
+	private SpritePeca spritePeca;
+	
 	private Tabuleiro meuTabuleiro = Tabuleiro.getInstance();
 	
 	
@@ -15,7 +18,7 @@ public class Jogador {
 		this.idJogador = idJogador;
 		this.minhaPeca = new Peca(idJogador);
 		this.dados = new Dado(12);
-		
+		//spritePeca = new SpritePeca(idJogador);
 	}
 
 	public String getNome() {
@@ -27,7 +30,7 @@ public class Jogador {
 	}
 	
 	public void colocarPecaNoTabuleiro() {
-		//this.minhaPeca.draw();
+		this.spritePeca.draw();
 	}
 	
 	public int lancarDados() {
@@ -47,10 +50,23 @@ public class Jogador {
 		if(novaPosicao>=100) {
 			casaBuscada = meuTabuleiro.getListaDeCasas().get(99);
 			this.minhaPeca.moveHouse(casaBuscada);
+			this.minhaPeca.setCasaAtual(casaBuscada.getNome());
+			
+			this.spritePeca.moveHouse(casaBuscada);
+			this.spritePeca.setCasaAtual(casaBuscada.getNome());
+			
+			
 			return numero;
 		}else {
 			casaBuscada = meuTabuleiro.getListaDeCasas().get(novaPosicao-1);
 			this.minhaPeca.moveHouse(casaBuscada);
+			this.minhaPeca.setCasaAtual(casaBuscada.getNome());
+			
+			
+			this.spritePeca.moveHouse(casaBuscada);
+			this.spritePeca.setCasaAtual(casaBuscada.getNome());
+			
+			
 			return numero;
 		}
 	}

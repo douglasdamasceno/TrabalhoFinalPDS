@@ -1,4 +1,4 @@
-package fronteiras;
+package main.Teste;
 
 
 import javax.swing.JOptionPane;

@@ -1,4 +1,4 @@
-package fronteiras;
+package main.Teste;
 
 import java.awt.Color;
 import java.awt.Font;

@@ -3,10 +3,15 @@ package fronteiras;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class TesteConsole {
+import controladores.ControladorJogo;
+
+public class TelaConsole {
 
 	private Scanner entrada;
-	public TesteConsole() {
+	private ControladorJogo controladorJogo = ControladorJogo.getInstance();
+	
+	
+	public TelaConsole() {
 		iniciarJogo();
 	}
 	
@@ -30,20 +35,24 @@ public class TesteConsole {
 			System.out.println("Não é possivel jogar com apenas 1 jogador");
 			qtdDeJogadores();
 		}else if(valor>1 && valor<=4){
+			System.out.println("entrou");
 			informarNomes(valor);
-		}
-	
+		}	
 	}
 	void informarNomes(int qtdJogadores) {
 		int i =0;
 		ArrayList<String> listaDeNomes = new ArrayList<String>();
 		while(i<qtdJogadores) {
+			System.out.println("Digite o nome do Jogado!");
 			String nome = entrada.nextLine();
 			if(!nome.isEmpty()) {
 				listaDeNomes.add(nome);
+			}else if(nome.isEmpty()){
+				System.out.println("Digite novamente os "+qtdJogadores+" nomes:");
+				informarNomes(qtdJogadores);
 			}
 			i++;
 		}
-		
+		controladorJogo.criarJogador(listaDeNomes, qtdJogadores);
 	}
 }

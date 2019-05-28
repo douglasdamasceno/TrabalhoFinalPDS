@@ -36,8 +36,9 @@ public class CasaEscada extends AbstractCasa implements CasaEspecial{
 
 	@Override
 	public void executarAcao(float posicaoX, float posicaoY) {
-		// TODO Auto-generated method stub
-		
+		posicaoX = posicaoFinalX;
+		posicaoY = posicaoFinalY;
+	
 	}
 
 }

@@ -1,6 +1,5 @@
 package entidade.casas;
 
-import JGamePlay.Sprite;
 import interfaces.CasaEspecial;
 
 public class CasaCobra extends AbstractCasa implements CasaEspecial{
@@ -17,7 +16,7 @@ public class CasaCobra extends AbstractCasa implements CasaEspecial{
 	@Override
 	public void executarAcao(float posicaoX, float posicaoY) {
 		posicaoX = posicaoFinalX;
-		posicaoY = posicaoY;
+		posicaoY = posicaoFinalY;
 	}
 
 	

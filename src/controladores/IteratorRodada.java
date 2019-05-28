@@ -1,47 +1,58 @@
 package controladores;
 
 
+import java.util.ArrayList;
+
 import entidade.Jogador;
 import interfaces.IteratorJogador;
 
 public class IteratorRodada implements IteratorJogador{
 	
-	private Jogador[] listaJogadores;
+	//private Jogador[] listaJogadores;
+	private ArrayList<Jogador> listasDeJogadores;
 	private int posicao;
 	
 	
-	public IteratorRodada(Jogador[] listaJogadores) {
-		this.listaJogadores = listaJogadores;
+	public IteratorRodada(ArrayList<Jogador> listaDeJogadores) {
+		//this.listaJogadores = listaJogadores;
+		this.listasDeJogadores = listaDeJogadores;
 		posicao = 0;
 	}
 
 	
 	@Override
 	public Jogador primeiroJogador() {
-		return listaJogadores[0];
+		return listasDeJogadores.get(0);
+		//return listaJogadores[0];
 	}
 
 	@Override
 	public Jogador proximoJogador() {
-		Jogador proximoJogador = listaJogadores[posicao];
+		//Jogador proximoJogador = listaJogadores[posicao];
+		Jogador proximoJogador = listasDeJogadores.get(posicao);
 		this.posicao++;
 		if(proximoJogador==null) {
-			return listaJogadores[0];
+			return listasDeJogadores.get(0);
+			//return listaJogadores[0];
 		}	
 		return proximoJogador;
 	}
 
 	@Override
 	public boolean existeProximoJogador() {
-		if(posicao>=listaJogadores.length || listaJogadores[posicao]==null) {
-			posicao =0;
+//		if(posicao>=listaJogadores.length || listaJogadores[posicao]==null) {
+//			posicao =0;
+//		}
+		if(posicao>=listasDeJogadores.size() || listasDeJogadores.get(posicao)==null) {
+			posicao=0;
 		}
 		return true;
 	}
 
 	@Override
 	public Jogador jogadorAtual() {
-		return listaJogadores[posicao];
+		return listasDeJogadores.get(posicao);
+		//return listaJogadores[posicao];
 	}
 
 }

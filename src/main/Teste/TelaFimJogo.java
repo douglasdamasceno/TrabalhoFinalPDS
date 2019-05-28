@@ -1,4 +1,4 @@
-package fronteiras;
+package main.Teste;
 
 public class TelaFimJogo {
 
