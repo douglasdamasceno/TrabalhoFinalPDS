@@ -6,7 +6,7 @@ import entidade.Jogo;
 
 public class ControladorJogo {
 	
-	private Jogo jogo ;///= Jogo.getInstance();
+	private Jogo jogo;
 	private static ControladorJogo controladorJogo;
 	
 	

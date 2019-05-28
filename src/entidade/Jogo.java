@@ -31,7 +31,9 @@ public class Jogo {
 		 while (iteratorRodado.existeProximoJogador()) {
 	         Jogador jogadorVez = iteratorRodado.proximoJogador();
 	         System.out.println(jogadorVez.getNome());	
-	    //     i++;
+	         jogadorVez.avancarPeca();
+	         if(jogadorVez.getMinhaPeca().getCasaAtual()==100)
+	        	 break;
 		 }
 	}
 

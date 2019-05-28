@@ -10,6 +10,9 @@ public class Jogador {
 	private Dado dados;
 	private SpritePeca spritePeca;
 	
+	///criar um classe estaticas para salvar as info da rodade talvez no jogo que vai
+	//pegar do jogador da vez
+	
 	private Tabuleiro meuTabuleiro = Tabuleiro.getInstance();
 	
 	
@@ -40,31 +43,35 @@ public class Jogador {
 	public int avancarPeca() {
 		int numero = this.lancarDados();
 		int novaPosicao = minhaPeca.getCasaAtual() + numero;
-		System.out.println("---------------------------------------------------");
 		System.out.println("Posicao Inicial "+ minhaPeca.getCasaAtual());
-		//minhaPeca.setCasaAtual(novaPosicao);
+		minhaPeca.setCasaAtual(novaPosicao);
 		System.out.println("Numero aleatorio "+ numero);
 		System.out.println("Nova posicao " + novaPosicao);
-		System.out.println("Nova Posicao Atual: "+ minhaPeca.getCasaAtual());
 		AbstractCasa casaBuscada;
 		if(novaPosicao>=100) {
 			casaBuscada = meuTabuleiro.getListaDeCasas().get(99);
+			System.out.println("Nova Posicao Atual: "+ minhaPeca.getCasaAtual());
+			System.out.println("---------------------------------------------------");
+				
 			this.minhaPeca.moveHouse(casaBuscada);
 			this.minhaPeca.setCasaAtual(casaBuscada.getNome());
 			
-			this.spritePeca.moveHouse(casaBuscada);
-			this.spritePeca.setCasaAtual(casaBuscada.getNome());
+			//this.spritePeca.moveHouse(casaBuscada);
+			//this.spritePeca.setCasaAtual(casaBuscada.getNome());
 			
 			
 			return numero;
 		}else {
 			casaBuscada = meuTabuleiro.getListaDeCasas().get(novaPosicao-1);
+			System.out.println("Nova Posicao Atual: "+ minhaPeca.getCasaAtual());
+			System.out.println("---------------------------------------------------");
+			
 			this.minhaPeca.moveHouse(casaBuscada);
 			this.minhaPeca.setCasaAtual(casaBuscada.getNome());
 			
 			
-			this.spritePeca.moveHouse(casaBuscada);
-			this.spritePeca.setCasaAtual(casaBuscada.getNome());
+			//this.spritePeca.moveHouse(casaBuscada);
+			//this.spritePeca.setCasaAtual(casaBuscada.getNome());
 			
 			
 			return numero;
