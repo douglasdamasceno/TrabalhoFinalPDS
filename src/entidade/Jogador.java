@@ -21,7 +21,7 @@ public class Jogador {
 		this.idJogador = idJogador;
 		this.minhaPeca = new Peca(idJogador);
 		this.dados = new Dado(12);
-		//spritePeca = new SpritePeca(idJogador);
+		spritePeca = new SpritePeca(idJogador);
 	}
 
 	public String getNome() {
@@ -56,8 +56,8 @@ public class Jogador {
 			this.minhaPeca.moveHouse(casaBuscada);
 			this.minhaPeca.setCasaAtual(casaBuscada.getNome());
 			
-			//this.spritePeca.moveHouse(casaBuscada);
-			//this.spritePeca.setCasaAtual(casaBuscada.getNome());
+			this.spritePeca.moveHouse(casaBuscada);
+			this.spritePeca.setCasaAtual(casaBuscada.getNome());
 			
 			
 			return numero;
@@ -70,8 +70,8 @@ public class Jogador {
 			this.minhaPeca.setCasaAtual(casaBuscada.getNome());
 			
 			
-			//this.spritePeca.moveHouse(casaBuscada);
-			//this.spritePeca.setCasaAtual(casaBuscada.getNome());
+			this.spritePeca.moveHouse(casaBuscada);
+			this.spritePeca.setCasaAtual(casaBuscada.getNome());
 			
 			
 			return numero;

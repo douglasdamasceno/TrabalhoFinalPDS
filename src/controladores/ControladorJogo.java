@@ -7,6 +7,7 @@ import entidade.Jogo;
 public class ControladorJogo {
 	
 	private Jogo jogo;
+	
 	private static ControladorJogo controladorJogo;
 	
 	

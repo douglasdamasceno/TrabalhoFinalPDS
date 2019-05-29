@@ -10,7 +10,7 @@ public class Jogo {
 	ArrayList<Jogador> listaDeJogadores;
 	private int CasaFinal;
 	private Tabuleiro tabuleiro = Tabuleiro.getInstance();
-	
+	//jogo tem o lado e passar para o jogador da vez
 	public Jogo() {
 		listaDeJogadores = new ArrayList<Jogador>();
 	}
@@ -25,14 +25,14 @@ public class Jogo {
 		iteratorRodado = new IteratorRodada(listaDeJogadores);
 		return true;
 	}
-	
+	//parametros com informação de posicao atual nome do jogador para subi para o controle
 	public void JogadoresRodada() {
 		
 		 while (iteratorRodado.existeProximoJogador()) {
 	         Jogador jogadorVez = iteratorRodado.proximoJogador();
 	         System.out.println(jogadorVez.getNome());	
 	         jogadorVez.avancarPeca();
-	         if(jogadorVez.getMinhaPeca().getCasaAtual()==100)
+	         if(jogadorVez.getMinhaPeca().getCasaAtual()>=100)
 	        	 break;
 		 }
 	}
