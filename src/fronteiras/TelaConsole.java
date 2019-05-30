@@ -53,6 +53,7 @@ public class TelaConsole {
 			}
 			i++;
 		}
+		//aqui vai chamar a outra tela
 		controladorJogo.criarJogador(listaDeNomes, qtdJogadores);
 	}
 }

@@ -28,27 +28,27 @@ public class SpritePeca {
 	}
 	
 	
-	public void moveHouse(AbstractCasa  casa) {
-		if(this.getPosicaoX() <= casa.getPosicaoX() || this.getPosicaoY() <= casa.getPosicaoY()) {
-			if(casa instanceof CasaEscada) {
-				CasaEscada casaE  = (CasaEscada.class).cast(casa);
-				casaE.executarAcao(posicaoX,posicaoY);
-				peca.setPosition(posicaoX, posicaoY);
-				this.casaAtual = casa.getNome();
-			}else if(casa instanceof CasaCobra) {
-				CasaCobra casaC  = (CasaCobra.class).cast(casa);
-				casaC.executarAcao(posicaoX,posicaoY);
-				peca.setPosition(posicaoX, posicaoY);
-				this.casaAtual = casa.getNome();
-			}else {
-				posicaoX = casa.getPosicaoX();
-				posicaoY = casa.getPosicaoY();
-				peca.setPosition(posicaoX, posicaoY);
-				this.casaAtual = casa.getNome();
-			}
-		}
-	}
-	
+//	public void moveHouse(AbstractCasa  casa) {
+//		if(this.getPosicaoX() <= casa.getPosicaoX() || this.getPosicaoY() <= casa.getPosicaoY()) {
+//			if(casa instanceof CasaEscada) {
+//				CasaEscada casaE  = (CasaEscada.class).cast(casa);
+//				casaE.executarAcao(posicaoX,posicaoY);
+//				peca.setPosition(posicaoX, posicaoY);
+//				this.casaAtual = casa.getNome();
+//			}else if(casa instanceof CasaCobra) {
+//				CasaCobra casaC  = (CasaCobra.class).cast(casa);
+//				casaC.executarAcao(posicaoX,posicaoY);
+//				peca.setPosition(posicaoX, posicaoY);
+//				this.casaAtual = casa.getNome();
+//			}else {
+//				posicaoX = casa.getPosicaoX();
+//				posicaoY = casa.getPosicaoY();
+//				peca.setPosition(posicaoX, posicaoY);
+//				this.casaAtual = casa.getNome();
+//			}
+//		}
+//	}
+//	
 	
 	public int getCasaAtual() {
 		return this.casaAtual;

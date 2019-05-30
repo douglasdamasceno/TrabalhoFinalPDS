@@ -3,7 +3,6 @@ package entidade;
 import java.util.ArrayList;
 
 import entidade.casas.AbstractCasa;
-import inicializador.InicializadorCasas;
 import inicializador.InicializadorCasasOrdenado;
 
 public class Tabuleiro {

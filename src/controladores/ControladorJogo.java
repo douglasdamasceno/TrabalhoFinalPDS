@@ -2,14 +2,16 @@ package controladores;
 
 import java.util.ArrayList;
 
+import entidade.Jogador;
 import entidade.Jogo;
+import fronteiras.TelaJogadorInfo;
 
 public class ControladorJogo {
 	
 	private Jogo jogo;
-	
+	private TelaJogadorInfo telaInfo;
 	private static ControladorJogo controladorJogo;
-	
+	private Jogador jogadorDaVez;
 	
 	private ControladorJogo() {
 		jogo = new Jogo();
@@ -30,12 +32,16 @@ public class ControladorJogo {
 				resposta= "Jogadores Não cadastrados com sucesso!";
 			}
 		}
-		JogadoresRodada();
+		String comando = "ddd";
+		JogadoresRodada(comando);
 		return resposta;
 	}
 	
-	public void JogadoresRodada() {
-		jogo.JogadoresRodada();
+	public void JogadoresRodada(String comando) {
+		if(!comando.isEmpty()) {
+			jogo.JogadoresRodada(comando,jogadorDaVez);
+			telaInfo = new TelaJogadorInfo(jogadorDaVez);
+		}		
 	}
 	
 }

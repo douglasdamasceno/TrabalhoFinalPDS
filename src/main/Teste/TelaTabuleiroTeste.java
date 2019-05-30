@@ -62,7 +62,7 @@ public class TelaTabuleiroTeste {
 			j1.colocarPecaNoTabuleiro();
 			
 			if(key.keyDown(Keyboard.SPACE_KEY)) {
-				 no = j1.avancarPeca();
+				// no = j1.avancarPeca(12);
 				 j1.colocarPecaNoTabuleiro();
 				 posica = j1.getMinhaPeca().getCasaAtual();
 				 janela.display();

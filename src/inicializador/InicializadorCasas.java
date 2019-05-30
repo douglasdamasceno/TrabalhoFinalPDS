@@ -3,7 +3,6 @@ package inicializador;
 import java.util.ArrayList;
 
 import entidade.casas.AbstractCasa;
-import entidade.casas.Casa;
 import fabrica.FabricaCasa;
 import interfaces.AbstractFabrica;
 
@@ -137,10 +136,5 @@ public class InicializadorCasas {
 		return listaDeCasa;
 	}
 	
-	public static void main(String[] args) {
-		InicializadorCasas IC = InicializadorCasas.getInstance();
-		
-		IC.iniciarCasas();
-		
-	}
+	
 }
