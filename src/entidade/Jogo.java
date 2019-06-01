@@ -13,11 +13,14 @@ public class Jogo {
 	private Tabuleiro meuTabuleiro = Tabuleiro.getInstance();
 	private AgregadorRodada agregadorRodada;
 	private Dado dado;
-	//jogo tem o dado e passar para o jogador da vez
+	private int numeroGerado;
+	private CasaEspecial casaDaRodada;
+	
 	public Jogo() {
 		listaDeJogadores = new ArrayList<Jogador>();
 		agregadorRodada = new AgregadorRodada();
 		dado = new Dado(12);
+		numeroGerado = 0;
 	}
 	
 	public boolean criarJogadores(ArrayList<String> nomeDoJogador,int qtdJogadores) {
@@ -31,41 +34,42 @@ public class Jogo {
 		return true;
 	}
 	
-	public void JogadoresRodada() {
+	public boolean JogadoresRodada() {
 	         Jogador jogadorVez = iteratorRodado.proximoJogador();
 	        
 	         System.out.println("Jogo : "+ jogadorVez.getNome());	
 	         
 	         this.avancarPeca(jogadorVez);
-	         if(jogadorVez.getMinhaPeca().getCasaAtual()>=100)
-	        	System.out.println("FIm");
+	         
+	         
+	         if(jogadorVez.getMinhaPeca().getCasaAtual()>=100) {
+	        	return true;
+	         }
+			return false;	
 	}
 	
 	public Jogador jogadorDaVez() {
 		return iteratorRodado.jogadorAtual();
 	}
 	
-	int lancarDados() {
+	public int lancarDados() {
 		return this.dado.lancarDado();
 	}
 	
 	public void avancarPeca(Jogador jogadoDaVez) {
 		int numero = this.lancarDados();
 		int novaPosicao = jogadoDaVez.getMinhaPeca().getCasaAtual() + numero;
-		System.out.println("Numero aleatorio: "+ numero);
+		this.setNumeroGerado(numero);
 		
-		
+		System.out.println("#Jogo Numero aleatorio: "+ numero);
 		CasaEspecial casaBuscada;
 		if(novaPosicao>=100) {
 			casaBuscada = meuTabuleiro.getListaDeCasas().get(99);
-			
+			this.setCasaDaRodada(casaBuscada);
 			jogadoDaVez.avancarPeca(casaBuscada);
-			
-		
 		}else {
 			casaBuscada = meuTabuleiro.getListaDeCasas().get(novaPosicao-1);
-			
-			
+			this.setCasaDaRodada(casaBuscada);
 			jogadoDaVez.avancarPeca(casaBuscada);
 		
 		}
@@ -74,6 +78,24 @@ public class Jogo {
 	
 	public ArrayList<Jogador> getListaDeJogadores() {
 		return listaDeJogadores;
+	}	
+	
+	public CasaEspecial getCasaDaRodada() {
+		return casaDaRodada;
+	}
+
+	public void setCasaDaRodada(CasaEspecial casaDaRodada) {
+		this.casaDaRodada = casaDaRodada;
+	}
+
+	public int getNumeroGerado() {
+		return numeroGerado;
+	}
+
+	
+	
+	public void setNumeroGerado(int numeroGerado) {
+		this.numeroGerado = numeroGerado;
 	}
 
 	

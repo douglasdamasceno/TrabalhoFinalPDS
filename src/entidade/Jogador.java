@@ -1,8 +1,6 @@
 package entidade;
 
-import entidade.casas.AbstractCasa;
-import entidade.casas.CasaCobra;
-import entidade.casas.CasaEscada;
+
 import interfaces.CasaEspecial;
 
 public class Jogador {
@@ -24,21 +22,21 @@ public class Jogador {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
-	
+
 	
 	public void avancarPeca(CasaEspecial novaCasa) {
-		System.out.println("Posicao Inicial "+ minhaPeca.getCasaAtual());
+		System.out.println("#Jogador Posicao Inicial "+ minhaPeca.getCasaAtual());
 		
-		minhaPeca.setCasaAtual(novaCasa.getNome());
-		System.out.println("Nova posicao " + minhaPeca.getCasaAtual());
-		
-		System.out.println("Tipo de Casa : "+ novaCasa.getClass().getSimpleName());		
-		System.out.println("Antes de Move: X"+ minhaPeca.getPosicaoX()+" Y: " +minhaPeca.getPosicaoY());
-			
+		//minhaPeca.setCasaAtual(novaCasa.getNome());
+		System.out.println("#Jogador Antes de Move: X"+ minhaPeca.getPosicaoX()+" Y: " +minhaPeca.getPosicaoY());
 		
 		novaCasa.executarAcao(minhaPeca);
+		
+		System.out.println("#Jogador Nova posicao " + minhaPeca.getCasaAtual());
+		
+		System.out.println("#Jogador Tipo de Casa : "+ novaCasa.getClass().getSimpleName());		
+			
+		
 		
 		
 //		if(novaCasa instanceof CasaEscada) {
@@ -55,11 +53,10 @@ public class Jogador {
 //		}
 		
 		
-		//this.minhaPeca.moveHouse(novaCasa);
 			
-		System.out.println("Depois de Move : X"+ minhaPeca.getPosicaoX()+" Y: " +minhaPeca.getPosicaoY());
+		System.out.println("#Jogador Depois de Move : X"+ minhaPeca.getPosicaoX()+" Y: " +minhaPeca.getPosicaoY());
 			
-		System.out.println("---------------------------------------------------");
+		
 			
 	}
 	

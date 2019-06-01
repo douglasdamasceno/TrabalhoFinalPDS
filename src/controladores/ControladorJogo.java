@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import entidade.Jogador;
 import entidade.Jogo;
 import fronteiras.TelaJogadorInfo;
+import main.Teste.TelaFimJogo;
 
 public class ControladorJogo {
 	
@@ -39,14 +40,25 @@ public class ControladorJogo {
 	
 	public void JogadoresRodada() {
 		String comando ="";
-			do{
-				comando = telaInfo.rolarDadoJogador();
-				telaInfo.setJogador(jogo.jogadorDaVez());
-				jogo.JogadoresRodada();
+		do{
+			telaInfo.setJogador(jogo.jogadorDaVez());
+			
+			comando = telaInfo.rolarDadoJogador();
+			
+			
+			if(jogo.JogadoresRodada()) {
 				
-				
-				telaInfo.Tese();
-			}while(comando.isEmpty());
+				System.out.println("Fim de Jogo");
+				telaInfo.FimDeJogo();
+				break;
+			}
+			
+			telaInfo.setCasa(jogo.getCasaDaRodada());
+			telaInfo.setNumeroAleatorio(jogo.getNumeroGerado());	
+			telaInfo.infoJogador();
+		}while(comando.isEmpty());
+			
+		
 				
 	}
 	
