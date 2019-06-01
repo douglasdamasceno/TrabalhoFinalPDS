@@ -3,15 +3,15 @@ package inicializador;
 
 import java.util.ArrayList;
 
-import entidade.casas.AbstractCasa;
 import fabrica.FabricaCasa;
 import interfaces.AbstractFabrica;
+import interfaces.CasaEspecial;
 
 public class InicializadorCasasOrdenado {
 	
 	private static InicializadorCasasOrdenado inicializadorCasas;
 	private AbstractFabrica minhaFabrica;
-	private ArrayList<AbstractCasa> listaDeCasa;
+	private ArrayList<CasaEspecial> listaDeCasa;
 	
 	public static InicializadorCasasOrdenado getInstance() {
 		if (inicializadorCasas == null)
@@ -24,10 +24,10 @@ public class InicializadorCasasOrdenado {
 		minhaFabrica = new FabricaCasa();
     }
 	
-	public ArrayList<AbstractCasa> iniciarCasas(){
+	public ArrayList<CasaEspecial> iniciarCasas(){
 		float posicaoX = 45;
 		float proximaCasaX =  100;
-		AbstractCasa casa;
+		CasaEspecial casa;
 		
 		int countX =0;
 		

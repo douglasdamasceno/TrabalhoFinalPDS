@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import controladores.IteratorRodada;
 import entidade.casas.AbstractCasa;
+import interfaces.CasaEspecial;
 
 public class Jogo {
 	
@@ -29,20 +30,20 @@ public class Jogo {
 		iteratorRodado = agregadorRodada.criarInteratorJogador(listaDeJogadores);
 		return true;
 	}
-	//parametros com informação de posicao atual nome do jogador para subi para o controle
-	public void JogadoresRodada(String comando,Jogador jogador) {
-		
-		 while (iteratorRodado.existeProximoJogador()) {
+	
+	public void JogadoresRodada() {
 	         Jogador jogadorVez = iteratorRodado.proximoJogador();
-	         jogador = jogadorVez;
-	         System.out.println(jogadorVez.getNome());	
-	         //jogadorVez.avancarPeca();
+	        
+	         System.out.println("Jogo : "+ jogadorVez.getNome());	
+	         
 	         this.avancarPeca(jogadorVez);
 	         if(jogadorVez.getMinhaPeca().getCasaAtual()>=100)
-	        	 break;
-		 }
+	        	System.out.println("FIm");
 	}
 	
+	public Jogador jogadorDaVez() {
+		return iteratorRodado.jogadorAtual();
+	}
 	
 	int lancarDados() {
 		return this.dado.lancarDado();
@@ -52,50 +53,21 @@ public class Jogo {
 		int numero = this.lancarDados();
 		int novaPosicao = jogadoDaVez.getMinhaPeca().getCasaAtual() + numero;
 		System.out.println("Numero aleatorio: "+ numero);
-		//System.out.println("Posicao Inicial "+ minhaPeca.getCasaAtual());
 		
-		//minhaPeca.setCasaAtual(novaPosicao);
 		
-		//System.out.println("Numero aleatorio "+ numero);
-		///System.out.println("Nova posicao " + novaPosicao);
-		
-		AbstractCasa casaBuscada;
+		CasaEspecial casaBuscada;
 		if(novaPosicao>=100) {
 			casaBuscada = meuTabuleiro.getListaDeCasas().get(99);
 			
 			jogadoDaVez.avancarPeca(casaBuscada);
 			
-			//System.out.println("---------------------------------------------------");
-			
-		///	jogadoDaVez.getMinhaPeca().setCasaAtual(casaBuscada.getNome());
-			//this.minhaPeca.moveHouse(casaBuscada);
-			//this.minhaPeca.setCasaAtual(casaBuscada.getNome());
-			
-			//this.spritePeca.moveHouse(casaBuscada);
-			//this.spritePeca.setCasaAtual(casaBuscada.getNome());
-			
-			
-			//return numero;
+		
 		}else {
 			casaBuscada = meuTabuleiro.getListaDeCasas().get(novaPosicao-1);
 			
 			
 			jogadoDaVez.avancarPeca(casaBuscada);
-			//System.out.println("Nova Posicao Atual: "+ jogadoDaVez.getMinhaPeca().getCasaAtual());
-			
-			//System.out.println("Casa Atual: "+ casaBuscada.getClass().getSimpleName());
-			
-			//System.out.println("---------------------------------------------------");
-			
-			//this.minhaPeca.moveHouse(casaBuscada);
-			//this.minhaPeca.setCasaAtual(casaBuscada.getNome());
-			
-			
-			//this.spritePeca.moveHouse(casaBuscada);
-			//this.spritePeca.setCasaAtual(casaBuscada.getNome());
-			
-			
-			//return numero;
+		
 		}
 	}
 	

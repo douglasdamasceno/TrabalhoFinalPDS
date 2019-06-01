@@ -35,5 +35,10 @@ public class Peca{
 	public void setPosicaoY(float posicaoY) {
 		this.posicaoY = posicaoY;
 	}
+
+	@Override
+	public String toString() {
+		return "Peca [casaAtualNumero=" + casaAtualNumero + ", posicaoX=" + posicaoX + ", posicaoY=" + posicaoY + "]";
+	}
 	
 }

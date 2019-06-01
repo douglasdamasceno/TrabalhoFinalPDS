@@ -9,7 +9,7 @@ public class AgregadorRodada implements AgregadorIterator{
 	private IteratorRodada iteratorJogador;
 	
 	public AgregadorRodada() {
-	
+		
 	}
 	@Override
 	public IteratorRodada criarInteratorJogador(ArrayList<Jogador> listaDeJogadores) {

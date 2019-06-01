@@ -2,12 +2,12 @@ package entidade;
 
 import java.util.ArrayList;
 
-import entidade.casas.AbstractCasa;
 import inicializador.InicializadorCasasOrdenado;
+import interfaces.CasaEspecial;
 
 public class Tabuleiro {
 	private static Tabuleiro tabuleiro;
-	private ArrayList<AbstractCasa> listaDeCasas;
+	private ArrayList<CasaEspecial> listaDeCasas;
 	private InicializadorCasasOrdenado inicializadorCasas;
 	
 	
@@ -21,7 +21,7 @@ public class Tabuleiro {
         listaDeCasas = inicializadorCasas.iniciarCasas();
     }
 	
-	public ArrayList<AbstractCasa> getListaDeCasas() {
+	public ArrayList<CasaEspecial> getListaDeCasas() {
 		return listaDeCasas;
 	}
 }

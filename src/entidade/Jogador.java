@@ -3,16 +3,13 @@ package entidade;
 import entidade.casas.AbstractCasa;
 import entidade.casas.CasaCobra;
 import entidade.casas.CasaEscada;
+import interfaces.CasaEspecial;
 
 public class Jogador {
 	private String nome;
 	private Peca minhaPeca;
 	private int idJogador;
-	private SpritePeca spritePeca;
 	
-	
-	///criar um classe estaticas para salvar as info da rodade talvez no jogo que vai
-	//pegar do jogador da vez
 	
 	public Jogador(String nome,int idJogador) {
 		this.nome = nome;
@@ -28,13 +25,10 @@ public class Jogador {
 		this.nome = nome;
 	}
 	
-	public void colocarPecaNoTabuleiro() {
-		this.spritePeca.draw();
-	}
 	
 	
 	
-	public void avancarPeca(AbstractCasa novaCasa) {
+	public void avancarPeca(CasaEspecial novaCasa) {
 		System.out.println("Posicao Inicial "+ minhaPeca.getCasaAtual());
 		
 		minhaPeca.setCasaAtual(novaCasa.getNome());
@@ -44,19 +38,21 @@ public class Jogador {
 		System.out.println("Antes de Move: X"+ minhaPeca.getPosicaoX()+" Y: " +minhaPeca.getPosicaoY());
 			
 		
+		novaCasa.executarAcao(minhaPeca);
 		
-		if(novaCasa instanceof CasaEscada) {
-			CasaEscada casaEscada  = (CasaEscada.class).cast(novaCasa);
-			casaEscada.executarAcao(minhaPeca);
-			
-			
-		}else if(novaCasa instanceof CasaCobra) {
-			CasaCobra casaCobra  = (CasaCobra.class).cast(novaCasa);
-			casaCobra.executarAcao(minhaPeca);
-		}else {
-			minhaPeca.setPosicaoX(novaCasa.getPosicaoX());
-			minhaPeca.setPosicaoY(novaCasa.getPosicaoY());
-		}
+		
+//		if(novaCasa instanceof CasaEscada) {
+//			CasaEscada casaEscada  = (CasaEscada.class).cast(novaCasa);
+//			casaEscada.executarAcao(minhaPeca);
+//			
+//			
+//		}else if(novaCasa instanceof CasaCobra) {
+//			CasaCobra casaCobra  = (CasaCobra.class).cast(novaCasa);
+//			casaCobra.executarAcao(minhaPeca);
+//		}else {
+//			minhaPeca.setPosicaoX(novaCasa.getPosicaoX());
+//			minhaPeca.setPosicaoY(novaCasa.getPosicaoY());
+//		}
 		
 		
 		//this.minhaPeca.moveHouse(novaCasa);
@@ -75,7 +71,7 @@ public class Jogador {
 
 	@Override
 	public String toString() {
-		return "Jogador [nome=" + nome + ", minhaPeca=" + minhaPeca + ", idJogador=" + idJogador + ", spritePeca=" + spritePeca + " ]";
+		return "Jogador [nome=" + nome + ", minhaPeca=" + minhaPeca + ", idJogador=" + idJogador + "]";
 	}
 	
 

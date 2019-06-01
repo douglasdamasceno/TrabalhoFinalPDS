@@ -43,7 +43,6 @@ public class TelaTabuleiroTeste {
 		dado.draw();
 		int no =0;
 		int posica =1;
-		Tabuleiro tabu = Tabuleiro.getInstance();
 		
 		
 		boolean executando = true;
@@ -58,12 +57,9 @@ public class TelaTabuleiroTeste {
 			janela.drawText("Posicao Atual: : "+posica,1050, 120, cor2,fonte2);
 			
 			
-			j2.colocarPecaNoTabuleiro();
-			j1.colocarPecaNoTabuleiro();
 			
 			if(key.keyDown(Keyboard.SPACE_KEY)) {
 				// no = j1.avancarPeca(12);
-				 j1.colocarPecaNoTabuleiro();
 				 posica = j1.getMinhaPeca().getCasaAtual();
 				 janela.display();
 					

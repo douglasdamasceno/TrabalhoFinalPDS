@@ -1,16 +1,16 @@
 package fabrica;
 
-import entidade.casas.AbstractCasa;
 import entidade.casas.Casa;
 import entidade.casas.CasaCobra;
 import entidade.casas.CasaEscada;
 import interfaces.AbstractFabrica;
+import interfaces.CasaEspecial;
 
 public class FabricaCasa implements AbstractFabrica{
 
 	@Override
-	public AbstractCasa criarCasa(int tipo,float posicaoX, float posicaoY, int nome) {
-		AbstractCasa casa = null;
+	public CasaEspecial criarCasa(int tipo,float posicaoX, float posicaoY, int nome) {
+		CasaEspecial casa = null;
 		if(tipo==3 || tipo==6 || tipo==14 || tipo==27 || tipo==39 || tipo==41 || tipo==69 || tipo==89) {
 			if(tipo==3) {
 				casa = new CasaEscada(posicaoX, posicaoY, nome, 345, 415.6f,37);

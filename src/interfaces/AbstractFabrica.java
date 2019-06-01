@@ -1,7 +1,7 @@
 package interfaces;
 
-import entidade.casas.AbstractCasa;
+
 
 public interface AbstractFabrica {
-	public AbstractCasa criarCasa(int tipo,float posicaoX, float posicaoY, int nome);
+	public CasaEspecial criarCasa(int tipo,float posicaoX, float posicaoY, int nome);
 }
