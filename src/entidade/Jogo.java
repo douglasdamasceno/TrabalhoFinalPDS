@@ -37,8 +37,7 @@ public class Jogo {
 	public boolean JogadoresRodada() {
 	         Jogador jogadorVez = iteratorRodado.proximoJogador();
 	        
-	         System.out.println("Jogo : "+ jogadorVez.getNome());	
-	         
+	  
 	         this.avancarPeca(jogadorVez);
 	         
 	         
@@ -59,18 +58,15 @@ public class Jogo {
 	public void avancarPeca(Jogador jogadoDaVez) {
 		int numero = this.lancarDados();
 		int novaPosicao = jogadoDaVez.getMinhaPeca().getCasaAtual() + numero;
-		this.setNumeroGerado(numero);
 		
-		System.out.println("#Jogo Numero aleatorio: "+ numero);
-		CasaEspecial casaBuscada;
+		this.setNumeroGerado(numero);
+	
 		if(novaPosicao>=100) {
-			casaBuscada = meuTabuleiro.getListaDeCasas().get(99);
-			this.setCasaDaRodada(casaBuscada);
-			jogadoDaVez.avancarPeca(casaBuscada);
+			casaDaRodada = meuTabuleiro.getListaDeCasas().get(99);
+			jogadoDaVez.avancarPeca(casaDaRodada);
 		}else {
-			casaBuscada = meuTabuleiro.getListaDeCasas().get(novaPosicao-1);
-			this.setCasaDaRodada(casaBuscada);
-			jogadoDaVez.avancarPeca(casaBuscada);
+			casaDaRodada = meuTabuleiro.getListaDeCasas().get(novaPosicao-1);
+			jogadoDaVez.avancarPeca(casaDaRodada);
 		
 		}
 	}
@@ -84,9 +80,7 @@ public class Jogo {
 		return casaDaRodada;
 	}
 
-	public void setCasaDaRodada(CasaEspecial casaDaRodada) {
-		this.casaDaRodada = casaDaRodada;
-	}
+	
 
 	public int getNumeroGerado() {
 		return numeroGerado;

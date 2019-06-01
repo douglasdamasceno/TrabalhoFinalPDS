@@ -4,9 +4,12 @@ import entidade.Peca;
 import interfaces.CasaEspecial;
 
 public class CasaCarta extends AbstractCasa implements CasaEspecial{
-
+	private int qtdDeCasaAvanca;
+	//private float
+	
 	public CasaCarta(float posicaoX, float posicaoY, int nome) {
 		super(posicaoX, posicaoY, nome);
+		
 		// TODO Auto-generated constructor stub
 	}
 
@@ -18,5 +21,6 @@ public class CasaCarta extends AbstractCasa implements CasaEspecial{
 		peca.setCasaAtual(this.getNome());
 		
 	}
+	
 
 }

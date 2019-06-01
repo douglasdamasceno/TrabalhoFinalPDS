@@ -6,20 +6,28 @@ import interfaces.CasaEspecial;
 public class CasaCobra extends AbstractCasa implements CasaEspecial{
 	private float posicaoFinalX;
 	private float posicaoFinalY;
-	private int casaFinal;
-	public CasaCobra(float posicaoX, float posicaoY, int nome,float posicaoFinalX,float posicaoFinalY,int casaFinal) {
+	private int casaDestino;
+	public CasaCobra(float posicaoX, float posicaoY, int nome,float posicaoFinalX,float posicaoFinalY,int casaDestino) {
 		super(posicaoX, posicaoY, nome);
 		this.posicaoFinalX = posicaoFinalX;
 		this.posicaoFinalY = posicaoFinalY;
-		this.casaFinal = casaFinal;
+		this.casaDestino = casaDestino;
 	
 	}
+	
+	public float getPosicaoFinalX() {
+		return posicaoFinalX;
+	}
 
+	public float getPosicaoFinalY() {
+		return posicaoFinalY;
+	}
+	
 	@Override
 	public void executarAcao(Peca peca) {
 		peca.setPosicaoX(posicaoFinalX);
 		peca.setPosicaoY(posicaoFinalY);
-		peca.setCasaAtual(casaFinal);
+		peca.setCasaAtual(casaDestino);
 	}
 
 	

@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 import entidade.Jogador;
 import entidade.Jogo;
+import fronteiras.TelaConsole;
+import fronteiras.TelaFimJogo;
 import fronteiras.TelaJogadorInfo;
-import main.Teste.TelaFimJogo;
 
 public class ControladorJogo {
 	
@@ -40,23 +41,21 @@ public class ControladorJogo {
 	
 	public void JogadoresRodada() {
 		String comando ="";
-		do{
-			telaInfo.setJogador(jogo.jogadorDaVez());
-			
-			comando = telaInfo.rolarDadoJogador();
-			
-			
-			if(jogo.JogadoresRodada()) {
-				
-				System.out.println("Fim de Jogo");
-				telaInfo.FimDeJogo();
-				break;
+		boolean comandoSpace = false;
+		do{	
+			if(comando.isEmpty()) {
+				telaInfo.setJogador(jogo.jogadorDaVez());
+				comando = telaInfo.rolarDadoJogador();
+				if(jogo.JogadoresRodada()) {
+					telaInfo.FimDeJogo(jogo.getNumeroGerado());
+					TelaConsole TC = new TelaConsole();
+					break;
+				}
+				telaInfo.setCasa(jogo.getCasaDaRodada());
+				telaInfo.setNumeroAleatorio(jogo.getNumeroGerado());	
+				telaInfo.infoJogador();
 			}
-			
-			telaInfo.setCasa(jogo.getCasaDaRodada());
-			telaInfo.setNumeroAleatorio(jogo.getNumeroGerado());	
-			telaInfo.infoJogador();
-		}while(comando.isEmpty());
+		}while(comando.isEmpty() || comandoSpace);
 			
 		
 				

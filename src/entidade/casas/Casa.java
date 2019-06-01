@@ -7,6 +7,7 @@ public class Casa extends AbstractCasa implements CasaEspecial{
 	
 	public Casa(float posicaoX, float posicaoY,int nome) {
 		super(posicaoX, posicaoY, nome);
+		this.setCasaDestino(getNome());
 	}
 
 	@Override

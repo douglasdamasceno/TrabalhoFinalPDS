@@ -3,27 +3,56 @@ package fronteiras;
 import java.util.Scanner;
 
 import entidade.Jogador;
-import entidade.casas.AbstractCasa;
 import interfaces.CasaEspecial;
-import main.Teste.TelaFimJogo;
 
 public class TelaJogadorInfo {
 	private Jogador jogador;
+	private int posicaoAnterior;
 	private Scanner scan;
 	private int numeroAleatorio;
 	private CasaEspecial casa;
 	private TelaFimJogo telaFimJogoConsole;
 	
+	
 	public TelaJogadorInfo() {
 	}
 	
 	public String rolarDadoJogador() {
+		posicaoAnterior = jogador.getMinhaPeca().getCasaAtual();
 		System.out.println("Vez do jogador: " + jogador.getNome());
+		System.out.println("Posicao Inicial: " + posicaoAnterior);
 		System.out.println("Digite enter para jogar os Dados:" );
 		scan = new Scanner(System.in);
+		
 		String entrada = scan.nextLine();
 		return entrada;
 	}
+	
+
+	public void infoJogador() {
+		
+		System.out.println("Valor dos Dados: "+ numeroAleatorio);
+		if((numeroAleatorio+ posicaoAnterior)==jogador.getMinhaPeca().getCasaAtual()) {
+			System.out.println("Nova Posicao : "+ jogador.getMinhaPeca().getCasaAtual());
+			System.out.println("Tipo: " + casa.getClass().getSimpleName());
+		}else {
+			System.out.println("Nova Posicao: "+ (numeroAleatorio+ posicaoAnterior));
+			System.out.println("Tipo: " + casa.getClass().getSimpleName());
+			System.out.println("Execacao da Acao da Casa ...");
+			System.out.println("Posicao Final: "+ jogador.getMinhaPeca().getCasaAtual());
+		}
+		System.out.println("-------------------------------------------------------");
+	}
+	
+	public TelaFimJogo getTelaFimJogoConsole() {
+		return telaFimJogoConsole;
+	}
+
+	
+	public void FimDeJogo(int numero) {
+		telaFimJogoConsole = new TelaFimJogo(numero,jogador);
+	}
+
 	
 	public CasaEspecial getCasa() {
 		return casa;
@@ -49,16 +78,5 @@ public class TelaJogadorInfo {
 		this.numeroAleatorio = numeroAleatorio;
 	}
 
-	public void infoJogador() {
-		System.out.println("Posicao Atual : "+ jogador.getMinhaPeca().getCasaAtual());
-		System.out.println("Numero Aleatorio : "+ numeroAleatorio);
-		System.out.println("Jogador Tela "+ jogador.toString());
-		System.out.println("Tipo: " + casa);
-		System.out.println("-------------------------------------------------------");
-	}
-	
-	public void FimDeJogo() {
-		telaFimJogoConsole = new TelaFimJogo(jogador);
-	}
 	
 }

@@ -18,7 +18,7 @@ public class TelaTabuleiroTeste {
 		
 		Keyboard key = janela.getKeyboard();
 		
-		GameImage backGround = new GameImage("recursos/serpentes2.png");
+		GameImage backGround = new GameImage("recursos/fundo.jpg");
 		
 		
 		//vermelha
@@ -28,7 +28,6 @@ public class TelaTabuleiroTeste {
 		Font fonte = new Font("serif", Font.BOLD, 24);
 		Font fonte2 = new Font("Arial", Font.BOLD, 14);
 		Font fonte3 = new Font("Monospaced", Font.BOLD, 14);
-		//Casa c2 = new Casa(proximoCasaX,proximaCasaY,"12");
 		
 		
 		Sprite dado = new Sprite("recursos/dadobotao.jpg");
