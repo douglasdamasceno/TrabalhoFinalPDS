@@ -3,7 +3,6 @@ package entidade;
 import java.util.ArrayList;
 
 import controladores.IteratorRodada;
-import entidade.casas.AbstractCasa;
 import interfaces.CasaEspecial;
 
 public class Jogo {

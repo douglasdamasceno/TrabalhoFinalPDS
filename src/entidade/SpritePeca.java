@@ -1,14 +1,9 @@
 package entidade;
 
 import JGamePlay.Sprite;
-import entidade.casas.AbstractCasa;
-import entidade.casas.CasaCobra;
-import entidade.casas.CasaEscada;
 
 public class SpritePeca {
 	private Sprite peca;
-	private float posicaoX;
-	private float posicaoY;
 	private float velocidade;
 	private int casaAtual;
 	
@@ -19,8 +14,6 @@ public class SpritePeca {
 		this.velocidade = 4f;
 		this.casaAtual = 1;
 		this.peca.setVelocityX(velocidade);
-		this.posicaoX = (float) peca.x;
-		this.posicaoY = (float) peca.y;
 	}
 	
 	public void draw() {

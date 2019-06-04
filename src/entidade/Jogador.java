@@ -24,7 +24,7 @@ public class Jogador {
 	}
 
 	
-	public void avancarPeca(CasaEspecial novaCasa) {
+	public void avancarPeca(CasaEspecial novaCasa) {		
 		novaCasa.executarAcao(minhaPeca);		
 	}
 	
