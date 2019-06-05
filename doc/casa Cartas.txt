@@ -1,0 +1,101 @@
+
+Casa cartas 4 
+
+Casa Posicao X : 4: 345 Posicao  Y 610
+________________________________
+Casa Posicao X : 5: 445 Posicao  Y 610
+Casa Posicao X : 6: 545 Posicao  Y 610
+Casa Posicao X : 7: 645 Posicao  Y 610
+
+
+Casa Carta 21
+Casa Posicao X : 21: 45 Posicao   Y 464.4 = 474.4f
+________________________________
+Casa Posicao X : 22: 145 Posicao  Y 464.4 = 474.4f
+Casa Posicao X : 23: 245 Posicao  Y 464.4 = 474.4f
+Casa Posicao X : 24: 345 Posicao  Y 464.4 = 474.4f
+
+
+Casa Carta 26
+Casa Posicao X : 26: 545 Posicao  Y 464.4 = 474.4f
+________________________________
+Casa Posicao X : 27: 645 Posicao  Y 464.4 = 474.4f
+Casa Posicao X : 28: 745 Posicao  Y 464.4 = 474.4f
+Casa Posicao X : 29: 845 Posicao  Y 464.4 = 474.4f
+
+
+
+
+Casa Carta 52
+
+Casa Posicao X : 55: 545 Posicao  Y 258 = 278
+________________________________
+Casa Posicao X : 54: 645 Posicao  Y 258 = 278
+Casa Posicao X : 53: 745 Posicao  Y 258 = 278
+Casa Posicao X : 52: 845 Posicao  Y 258 = 278
+
+
+
+Casa Carta 72
+Casa Posicao X : 74: 645 Posicao  Y 120.4 =  140.4f
+________________________________
+Casa Posicao X : 73: 745 Posicao  Y 120.4 =  140.4f
+Casa Posicao X : 72: 845 Posicao  Y 120.4 =  140.4f
+Casa Posicao X : 71: 945 Posicao  Y 120.4 =  140.4f
+
+
+
+Casa Carta 80
+
+Casa Posicao X : 80: 45 Posicao   Y 120.4 =  140.4f
+________________________________
+Casa Posicao X : 81: 45 Posicao   Y 51.6  = 71.6f
+Casa Posicao X : 82: 145 Posicao  Y 51.6  = 71.6f
+Casa Posicao X : 83: 245 Posicao  Y 51.6  = 71.6f
+
+
+
+Casa Carta 86
+Casa Posicao X : 86: 545 Posicao  Y 51.6  = 71.6f
+________________________________
+Casa Posicao X : 87: 645 Posicao  Y 51.6  = 71.6f
+Casa Posicao X : 88: 745 Posicao  Y 51.6  = 71.6f
+Casa Posicao X : 89: 845 Posicao  Y 51.6  = 71.6f
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

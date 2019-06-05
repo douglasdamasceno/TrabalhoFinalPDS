@@ -7,11 +7,13 @@ import entidade.Jogo;
 import fronteiras.TelaConsole;
 import fronteiras.TelaFimJogo;
 import fronteiras.TelaJogadorInfo;
+import main.Teste.TabuleiroInfo;
 
 public class ControladorJogo {
 	
 	private Jogo jogo;
 	private TelaJogadorInfo telaInfo;
+	private TabuleiroInfo tabuleiroInfo = TabuleiroInfo.getInstace();
 	private static ControladorJogo controladorJogo;
 	
 	private ControladorJogo() {
@@ -54,6 +56,9 @@ public class ControladorJogo {
 				telaInfo.setCasa(jogo.getCasaDaRodada());
 				telaInfo.setNumeroAleatorio(jogo.getNumeroGerado());	
 				telaInfo.infoJogador();
+			}else if(comandoSpace) {
+				//tabuleiroInfo.setJogador(jogo.jogadorDaVez());
+				
 			}
 		}while(comando.isEmpty() || comandoSpace);
 			
