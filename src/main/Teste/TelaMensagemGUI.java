@@ -3,13 +3,18 @@ package main.Teste;
 
 import javax.swing.JOptionPane;
 
-public class TelaMensagem {
-	private static TelaMensagem controleMensagem;
+public class TelaMensagemGUI {
+//	private TelaMensagemGUI controleMensagem;
 	
-	public static TelaMensagem getInstance() {
-		if(controleMensagem == null) controleMensagem = new TelaMensagem();
-		return controleMensagem;
+//	public TelaMensagemGUI() {
+//		if(controleMensagem == null) controleMensagem = new TelaMensagemGUI();
+//		return controleMensagem;
+//	}
+	
+	public TelaMensagemGUI() {
+	
 	}
+	
 	//pegar ipunt
 	public String showInputDialog(String texto) {
 		String entrada = JOptionPane.showInputDialog(texto);

@@ -4,11 +4,13 @@ import JGamePlay.Sprite;
 
 public class SpritePeca {
 	private Sprite peca;
+	private int id;
 	private float velocidade;
 	private int casaAtual;
 	
-	public SpritePeca(String nome) {
-		this.peca = new Sprite(nome);
+	public SpritePeca(int numero) {
+		this.peca = new Sprite("recursos/sprite/peca"+ numero+".png");
+		this.id = numero;
 		this.peca.setPosition(45, 610);
 		this.peca.setDimension(60, 60);
 		this.velocidade = 4f;
@@ -46,6 +48,14 @@ public class SpritePeca {
 		peca.setPosition(posicaoX, posicaoY);
 	}
 
-	
+	public int getId() {
+		return id;
+	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
+	
 }

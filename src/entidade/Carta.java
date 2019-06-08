@@ -1,14 +1,24 @@
 package entidade;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Carta {
+	private ArrayList<Integer> numeroAleatorio;
 	
-	public int informarNumero(){
-		
-/// tem que ter um random negativo;		
-		 Random random = new Random();
-	     return random.nextInt(3) + 1;
+	public Carta() {
+		numeroAleatorio = new ArrayList<Integer>();
+	}
+	
+	public int informarNumero(){	
+		 Random random = new Random();	 
+		 int positivo = random.nextInt(3) +1;
+		 int negativo = (random.nextInt(3) +1) * -1;
+		 this.numeroAleatorio.add(positivo);
+		 this.numeroAleatorio.add(negativo);
+	
+		 int posicao = random.nextInt(2);
+	     return numeroAleatorio.get(posicao);
 	}
 
 }

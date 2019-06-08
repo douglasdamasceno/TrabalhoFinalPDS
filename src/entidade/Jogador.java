@@ -30,6 +30,10 @@ public class Jogador {
 	}
 	
 	
+	public int getIdJogador() {
+		return idJogador;
+	}
+
 	public Peca getMinhaPeca() {
 		return minhaPeca;
 	}

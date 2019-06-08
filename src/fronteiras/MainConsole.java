@@ -6,7 +6,7 @@ public class MainConsole {
 	
 	public static void main(String[] args) {
 		
-		TelaConsole TC= new TelaConsole();
+		TelaInicialConsole TC= new TelaInicialConsole();
 				
 	}
 }

@@ -30,12 +30,12 @@ public class TelaTabuleiroInfoGUI {
 	private Keyboard keyBoard ;
 	
 	//vermelha
-	private Color cor;
-	private Color cor2;
+	private Color red;
+	private Color preto;
 			//fontes
-	private	Font fonte;
-	private	Font fonte2;
-	private	Font fonte3;
+	private	Font serif;
+	private	Font arial;
+	private	Font monospaced;
 			
 			
 	private Sprite dado;
@@ -55,21 +55,16 @@ public class TelaTabuleiroInfoGUI {
 	private ArrayList<Float> casaPosicaoJanelaY;
 	
 	
-	//mesmo Tela tabuleiro 
 	private TelaTabuleiroInfoGUI() {
-		
 		janela = new Window(1190,1000);
-		
 		backGround = new GameImage("recursos/fundo.jpg");
-		
 		keyBoard = janela.getKeyboard();
 		
-		fonte = new Font("serif", Font.BOLD, 24);
-		fonte2 = new Font("Arial", Font.BOLD, 14);
-		fonte3 = new Font("Monospaced", Font.BOLD, 14);
-		
-		cor = new Color(255,0, 0);
-		cor2 = new Color(0,255, 0);
+		serif = new Font("serif", Font.BOLD, 24);
+		arial = new Font("Arial", Font.BOLD, 14);
+		monospaced = new Font("Monospaced", Font.BOLD, 14);
+		red = new Color(255,0, 0);
+		preto = new Color(0,0, 0);
 		
 		dado = new Sprite("recursos/dadobotao.jpg");
 		dado.setPosition(1050, 120);
@@ -78,14 +73,8 @@ public class TelaTabuleiroInfoGUI {
 		listasSpritePeca = new ArrayList<SpritePeca>();
 		inicializacaoSpritePeca = new InicializadorSpritePeca();
 		
-		
 		casaPosicaoJanelaX = inicializadorPosicoes.getListaPosicaoX();
 		casaPosicaoJanelaY = inicializadorPosicoes.getListaPosicaoY();
-		
-		
-		inicializarPecasJogadores(2);
-		
-		
 	}
 	
 	
@@ -102,7 +91,6 @@ public class TelaTabuleiroInfoGUI {
 			spritePeca.draw();
 		}
 	}
-	
 	public static TelaTabuleiroInfoGUI getInstace(){
         if(tabuleiroInfo == null) tabuleiroInfo = new TelaTabuleiroInfoGUI();
         return tabuleiroInfo;
@@ -110,13 +98,30 @@ public class TelaTabuleiroInfoGUI {
 		
 	
 	public void inforJogador() {
-		//janela.drawText("Posicao Inicial: : "+posica,1050, 120, cor2,fonte2);
-		janela.drawText("A VEZ É DO P1",1050, 30, cor,fonte3);
-		janela.drawText(jogadorInfo.getNome(),1050, 60, cor,fonte2);
-		//janela.drawText("Valor do Dados: "+no,1050, 90, cor2,fonte2);
-		//janela.drawText("Posicao Atual: : "+posica,1050, 120, cor2,fonte2);
+		janela.drawText("Posicao Inicial: "+jogadorInfo.getMinhaPeca().getCasaAtual(),1045, 120, preto,arial);
+		janela.drawText(valorDoDado+"",1045, 100, preto,arial);
+		janela.drawText("Valor do Dados: ",1045, 90, preto,arial);
+		janela.drawText("id "+jogadorInfo.getIdJogador() +jogadorInfo.getNome(),1045, 60, red,arial);
+		janela.drawText("Jogador da Vez",1045, 30, preto,arial);
+		
+		janela.drawText("Posicao Atual : "+ jogadorInfo.getMinhaPeca().getCasaAtual(),1045, 140, preto,arial);
+		//janela.drawText("Tipo : "+ casaAtual.getNome(),1050, 120, preto,arial);
 	}
-
+	
+	public void posicaoSpritePeca() {
+		for (SpritePeca  sprite: listasSpritePeca) {
+			if(sprite.getId()== this.jogadorInfo.getIdJogador()) {
+				int posicao = jogadorInfo.getMinhaPeca().getCasaAtual()-1;
+				
+				float posicaoX = casaPosicaoJanelaX.get(posicao);
+				float posicaoY =  casaPosicaoJanelaY.get(posicao);
+				
+				sprite.setPosicao(posicaoX, posicaoY);
+			}
+		}
+	}
+	
+	
 ///usando controlador
 	public void setJogadorInfo(Jogador jogadorInfo) {
 		this.jogadorInfo = jogadorInfo;
@@ -141,6 +146,7 @@ public class TelaTabuleiroInfoGUI {
 		 while(!keyBoard.keyDown(Keyboard.SPACE_KEY)) {
 			 System.out.println("Aperte o Space");
 		 }
+		 System.out.println("saiu  ");
 		 return true;
 	}
 	 

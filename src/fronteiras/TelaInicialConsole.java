@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 import controladores.ControladorJogo;
 
-public class TelaConsole {
+public class TelaInicialConsole {
 
 	private Scanner entrada;
 	private ControladorJogo controladorJogo = ControladorJogo.getInstance();
 	
 	
-	public TelaConsole() {
+	public TelaInicialConsole() {
 		iniciarJogo();
 	}
 	
@@ -35,7 +35,6 @@ public class TelaConsole {
 			System.out.println("Não é possivel jogar com apenas 1 jogador");
 			qtdDeJogadores();
 		}else if(valor>1 && valor<=4){
-			System.out.println("entrou");
 			informarNomes(valor);
 		}	
 	}

@@ -21,7 +21,7 @@ public class TelaTabuleiroTeste {
 		
 		GameImage backGround = new GameImage("recursos/fundo.jpg");
 		
-		SpritePeca sprite = new SpritePeca("recursos/sprite/peca"+(1)+".png");
+		SpritePeca sprite = new SpritePeca(1);
 		
 		//vermelha
 		Color cor = new Color(255,0, 0);
