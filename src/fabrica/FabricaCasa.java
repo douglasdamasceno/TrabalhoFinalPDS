@@ -49,11 +49,10 @@ public class FabricaCasa implements AbstractFabrica{
 				casa = new CasaCobra(posicaoX, posicaoY, nome, 445, 209.2f,65);
 			}
 		}//casas cartas
-//		else if(tipo==4 || tipo==21 || tipo==26 || tipo==52 || tipo==72 || tipo==80 || tipo==86){
-//			if(tipo==4) {
-//				casa = new CasaCarta(posicaoX, posicaoY, nome, posicaoX1, 610, posicaoX2, 610, posicaoX3, 610);
-//			}
-//		}
+		else if(tipo==4 || tipo==21 || tipo==26 || tipo==52 || tipo==72 || tipo==80 || tipo==86){
+				casa = new CasaCarta(posicaoX, posicaoY, nome);
+			
+		}
 		else {
 			casa = new Casa(posicaoX, posicaoY, nome);
 		}

@@ -10,3 +10,5 @@ public class MainVerdadeira {
 				
 	}
 }
+//observe  com controle de evento
+

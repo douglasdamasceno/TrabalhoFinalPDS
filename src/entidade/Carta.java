@@ -6,7 +6,7 @@ public class Carta {
 	
 	public int informarNumero(){
 		 Random random = new Random();
-	     return random.nextInt(3);
+	     return random.nextInt(3) + 1;
 	}
 
 }
