@@ -9,8 +9,8 @@ import interfaces.CasaEspecial;
 public class CasaCarta extends AbstractCasa implements CasaEspecial{
 	private Carta minhaCarta;
 	
-	public CasaCarta(float posicaoX,float posicaoY,int nome) {
-		super(posicaoX, posicaoY, nome);
+	public CasaCarta(int nome) {
+		super(nome);
 		minhaCarta = new Carta();
 		
 	}
@@ -20,11 +20,7 @@ public class CasaCarta extends AbstractCasa implements CasaEspecial{
 		int posicao = minhaCarta.informarNumero();
 		
 		//posicoes estao erradas
-		///chamo minha carta pego a posicao do arrayList;
-		//depois passo a posicao
 		
-		//peca.setPosicaoX(this.posicaoX);
-		//peca.setPosicaoY(posicaoY);
 		peca.setCasaAtual(this.getNome()+ posicao);
 		
 	}

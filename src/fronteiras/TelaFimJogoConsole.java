@@ -2,9 +2,9 @@ package fronteiras;
 
 import entidade.Jogador;
 
-public class TelaFimJogo {
+public class TelaFimJogoConsole {
 	
-	public TelaFimJogo(int numero,Jogador jogador) {
+	public TelaFimJogoConsole(int numero,Jogador jogador) {
 		inforDoCampeao(numero,jogador);
 	}
 	

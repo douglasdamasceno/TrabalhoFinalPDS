@@ -5,16 +5,16 @@ import java.util.Scanner;
 import entidade.Jogador;
 import interfaces.CasaEspecial;
 
-public class TelaJogadorInfo {
+public class TelaJogadorInfoConsole {
 	private Jogador jogador;
 	private int posicaoAnterior;
 	private Scanner scan;
 	private int numeroAleatorio;
 	private CasaEspecial casa;
-	private TelaFimJogo telaFimJogoConsole;
+	private TelaFimJogoConsole telaFimJogoConsole;
 	
 	
-	public TelaJogadorInfo() {
+	public TelaJogadorInfoConsole() {
 	}
 	
 	public String rolarDadoJogador() {
@@ -44,13 +44,13 @@ public class TelaJogadorInfo {
 		System.out.println("-------------------------------------------------------");
 	}
 	
-	public TelaFimJogo getTelaFimJogoConsole() {
+	public TelaFimJogoConsole getTelaFimJogoConsole() {
 		return telaFimJogoConsole;
 	}
 
 	
 	public void FimDeJogo(int numero) {
-		telaFimJogoConsole = new TelaFimJogo(numero,jogador);
+		telaFimJogoConsole = new TelaFimJogoConsole(numero,jogador);
 	}
 
 	

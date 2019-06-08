@@ -7,13 +7,14 @@ public class SpritePeca {
 	private float velocidade;
 	private int casaAtual;
 	
-	public SpritePeca(int id) {
-		this.peca = new Sprite("recursos/sprite/peca"+id+".png");
+	public SpritePeca(String nome) {
+		this.peca = new Sprite(nome);
 		this.peca.setPosition(45, 610);
 		this.peca.setDimension(60, 60);
 		this.velocidade = 4f;
 		this.casaAtual = 1;
 		this.peca.setVelocityX(velocidade);
+		draw();
 	}
 	
 	public void draw() {

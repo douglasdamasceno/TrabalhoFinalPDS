@@ -15,46 +15,46 @@ public class FabricaCasa implements AbstractFabrica{
 		//casas escadas
 		if(tipo==3 || tipo==6 || tipo==14 || tipo==27 || tipo==39 || tipo==41 || tipo==69 || tipo==89) {
 			if(tipo==3) {
-				casa = new CasaEscada(posicaoX, posicaoY, nome, 345, 415.6f,37);
+				casa = new CasaEscada(nome,37);
 			}else if(tipo==6) {
-				casa = new CasaEscada(posicaoX, posicaoY, nome, 445, 543.2f,16);
+				casa = new CasaEscada(nome,16);
 			}else if(tipo==14) {
-				casa = new CasaEscada(posicaoX, posicaoY, nome, 845, 415.6f,32);
+				casa = new CasaEscada(nome,32);
 			}else if(tipo==27) {
-				casa = new CasaEscada(posicaoX, posicaoY, nome, 545, 278,55);
+				casa = new CasaEscada(nome,55);
 			}else if(tipo==39) {
-				casa = new CasaEscada(posicaoX, posicaoY, nome, 245, 346.8f,43);
+				casa = new CasaEscada(nome,43);
 			}else if(tipo==41) {
-				casa = new CasaEscada(posicaoX, posicaoY, nome, 445, 71.6f,85);
+				casa = new CasaEscada(nome,85);
 			}else if(tipo==69) {
-				casa = new CasaEscada(posicaoX, posicaoY, nome, 645, 71.6f,87);
+				casa = new CasaEscada(nome,87);
 			}else if(tipo==89) {
-				casa = new CasaEscada(posicaoX, posicaoY, nome, 945, 7.2f,91);
+				casa = new CasaEscada(nome,91);
 			}
 		}//casas cobras
 		else if(tipo==15 || tipo==42 || tipo==49 || tipo==57 || tipo==75 || tipo==88 || tipo==97) {
 			if(tipo==15) {
-				casa = new CasaCobra(posicaoX, posicaoY, nome, 845, 610,9);
+				casa = new CasaCobra(nome,9);
 			}else if(tipo==42) {
-				casa = new CasaCobra(posicaoX, posicaoY, nome, 345, 543.2f,17);
+				casa = new CasaCobra(nome,17);
 			}else if(tipo==49) {
-				casa = new CasaCobra(posicaoX, posicaoY, nome, 845, 543.2f,12);
+				casa = new CasaCobra(nome,12);
 			}else if(tipo==57) {
-				casa = new CasaCobra(posicaoX, posicaoY, nome, 545, 346.8f,46);
+				casa = new CasaCobra(nome,46);
 			}else if(tipo==75) {
-				casa = new CasaCobra(posicaoX, posicaoY, nome, 645, 346.8f,47);
+				casa = new CasaCobra(nome, 47);
 			}else if(tipo==88) {
-				casa = new CasaCobra(posicaoX, posicaoY, nome, 445, 415.6f,36);
+				casa = new CasaCobra(nome,36);
 			}else if(tipo==97) {
-				casa = new CasaCobra(posicaoX, posicaoY, nome, 445, 209.2f,65);
+				casa = new CasaCobra(nome,65);
 			}
 		}//casas cartas
 		else if(tipo==4 || tipo==21 || tipo==26 || tipo==52 || tipo==72 || tipo==80 || tipo==86){
-				casa = new CasaCarta(posicaoX, posicaoY, nome);
+				casa = new CasaCarta(nome);
 			
 		}
 		else {
-			casa = new Casa(posicaoX, posicaoY, nome);
+			casa = new Casa(nome);
 		}
 		return casa;
 	}

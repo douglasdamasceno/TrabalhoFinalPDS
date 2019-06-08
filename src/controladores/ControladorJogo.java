@@ -2,24 +2,23 @@ package controladores;
 
 import java.util.ArrayList;
 
-import entidade.Jogador;
+
 import entidade.Jogo;
 import fronteiras.TelaConsole;
-import fronteiras.TelaFimJogo;
-import fronteiras.TelaJogadorInfo;
-import main.Teste.TabuleiroInfo;
+import fronteiras.TelaJogadorInfoConsole;
+import main.Teste.TelaTabuleiroInfoGUI;
 
 public class ControladorJogo {
 	
 	private Jogo jogo;
-	private TelaJogadorInfo telaInfo;
-	private TabuleiroInfo tabuleiroInfo = TabuleiroInfo.getInstace();
+	private TelaJogadorInfoConsole telaInfo;
+	private TelaTabuleiroInfoGUI tabuleiroInfo = TelaTabuleiroInfoGUI.getInstace();
 	private static ControladorJogo controladorJogo;
 	
 	private ControladorJogo() {
 		jogo = new Jogo();
 
-		telaInfo = new TelaJogadorInfo();
+		telaInfo = new TelaJogadorInfoConsole();
 	}
 	
 	public static ControladorJogo getInstance() {
@@ -28,36 +27,44 @@ public class ControladorJogo {
 		return controladorJogo;
 	}
 	
-	public String criarJogador(ArrayList<String> nomeDoJogador,int qtdJogadores) {
-		String resposta = null;
+	public void criarJogador(ArrayList<String> nomeDoJogador,int qtdJogadores) {
+		//String resposta = null;
 		if(!nomeDoJogador.isEmpty()) {
-			if(jogo.criarJogadores(nomeDoJogador,qtdJogadores)) {
-				resposta= "Jogadores Cadastrados com sucesso!";
-			}else {
-				resposta= "Jogadores Não cadastrados com sucesso!";
-			}
+			jogo.criarJogadores(nomeDoJogador,qtdJogadores);
+			
 		}
 		JogadoresRodada();
-		return resposta;
 	}
 	
 	public void JogadoresRodada() {
-		String comando ="";
-		boolean comandoSpace = false;
+		String comando ="a";
+		boolean comandoSpace = true;
 		do{	
 			if(comando.isEmpty()) {
 				telaInfo.setJogador(jogo.jogadorDaVez());
 				comando = telaInfo.rolarDadoJogador();
 				if(jogo.JogadoresRodada()) {
 					telaInfo.FimDeJogo(jogo.getNumeroGerado());
-					TelaConsole TC = new TelaConsole();
 					break;
 				}
 				telaInfo.setCasa(jogo.getCasaDaRodada());
 				telaInfo.setNumeroAleatorio(jogo.getNumeroGerado());	
 				telaInfo.infoJogador();
 			}else if(comandoSpace) {
-				//tabuleiroInfo.setJogador(jogo.jogadorDaVez());
+				//
+				tabuleiroInfo.exibirTabuleiro();
+				
+				//iniciar pecas aqui pegando a qttd de jogadores
+				tabuleiroInfo.exibirPecasJogadores();
+				
+				tabuleiroInfo.setJogadorInfo(jogo.jogadorDaVez());
+				
+				
+				
+				tabuleiroInfo.atualizarTabuleiro();
+				comandoSpace = tabuleiroInfo.rolarDadoJogador();
+				
+				tabuleiroInfo.atualizarTabuleiro();
 				
 			}
 		}while(comando.isEmpty() || comandoSpace);

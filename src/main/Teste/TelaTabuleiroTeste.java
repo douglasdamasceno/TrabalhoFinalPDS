@@ -8,6 +8,7 @@ import JGamePlay.Keyboard;
 import JGamePlay.Sprite;
 import JGamePlay.Window;
 import entidade.Jogador;
+import entidade.SpritePeca;
 import entidade.Tabuleiro;
 
 public class TelaTabuleiroTeste {
@@ -20,10 +21,11 @@ public class TelaTabuleiroTeste {
 		
 		GameImage backGround = new GameImage("recursos/fundo.jpg");
 		
+		SpritePeca sprite = new SpritePeca("recursos/sprite/peca"+(1)+".png");
 		
 		//vermelha
 		Color cor = new Color(255,0, 0);
-		Color cor2 = new Color(0,255, 0);
+		Color cor2 = new Color(0,0, 0);
 		//fontes
 		Font fonte = new Font("serif", Font.BOLD, 24);
 		Font fonte2 = new Font("Arial", Font.BOLD, 14);
@@ -46,9 +48,9 @@ public class TelaTabuleiroTeste {
 		
 		boolean executando = true;
 		while (executando) {
-			
 			backGround.draw();
 			dado.draw();
+			sprite.draw();
 			
 			janela.drawText("A VEZ É DO P1",1050, 30, cor,fonte3);
 			janela.drawText(j1.getNome(),1050, 60, cor,fonte2);

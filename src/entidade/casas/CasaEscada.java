@@ -9,10 +9,8 @@ public class CasaEscada extends AbstractCasa implements CasaEspecial{
 	private float posicaoFinalY;
 	private int casaFinal;
 	
-	public CasaEscada(float posicaoX, float posicaoY, int nome,float posicaoFinalX,float posicaoFinalY,int casaFinal) {
-		super(posicaoX, posicaoY, nome);
-		this.posicaoFinalX = posicaoFinalX;
-		this.posicaoFinalY = posicaoFinalY;
+	public CasaEscada(int nome,int casaFinal) {
+		super(nome);
 		this.casaFinal = casaFinal;
 	}
 
@@ -26,8 +24,6 @@ public class CasaEscada extends AbstractCasa implements CasaEspecial{
 	
 	@Override
 	public void executarAcao(Peca peca) {
-		peca.setPosicaoX(posicaoFinalX);
-		peca.setPosicaoY(posicaoFinalY);
 		peca.setCasaAtual(casaFinal);
 	}
 }

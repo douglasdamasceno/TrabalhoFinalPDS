@@ -20,10 +20,10 @@ public class InicializadorJanela {
         return inicializadorCasas;	
 	}
 	
-	private InicializadorJanela(){
-		
+	private InicializadorJanela(){	
 		listaPosicaoX = new ArrayList<Float>();
 		listaPosicaoY = new ArrayList<Float>();
+		iniciarListasPosicao();
 	}
 	
 	public void iniciarListasPosicao(){
