@@ -28,6 +28,7 @@ public class IteratorRodada implements IteratorJogador{
 		Jogador proximoJogador = listasDeJogadores.get(posicao);
 		this.posicao++;
 		if(proximoJogador==null) {
+			posicao=0;
 			return listasDeJogadores.get(0);
 		}	
 		return proximoJogador;

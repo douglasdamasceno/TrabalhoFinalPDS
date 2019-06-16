@@ -3,10 +3,6 @@ package inicializador;
 
 import java.util.ArrayList;
 
-import fabrica.FabricaCasa;
-import interfaces.AbstractFabrica;
-import interfaces.CasaEspecial;
-
 public class InicializadorJanela {
 	
 	private static InicializadorJanela inicializadorCasas;
@@ -29,7 +25,6 @@ public class InicializadorJanela {
 	public void iniciarListasPosicao(){
 		float posicaoX = 45;
 		float proximaCasaX =  100;
-		CasaEspecial casa;
 		
 		int countX =0;
 		

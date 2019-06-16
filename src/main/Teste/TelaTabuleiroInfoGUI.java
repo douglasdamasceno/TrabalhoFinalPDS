@@ -39,7 +39,7 @@ public class TelaTabuleiroInfoGUI {
 			
 			
 	private Sprite dado;
-	
+	private int posicaoAnterior;
 	
 	private Jogador jogadorInfo;
 	private CasaEspecial casaAtual;
@@ -98,14 +98,15 @@ public class TelaTabuleiroInfoGUI {
 		
 	
 	public void inforJogador() {
-		janela.drawText("Posicao Inicial: "+jogadorInfo.getMinhaPeca().getCasaAtual(),1045, 120, preto,arial);
+		janela.drawText("Posicao Inicial: "+posicaoAnterior,1045, 120, preto,arial);
 		janela.drawText(valorDoDado+"",1045, 100, preto,arial);
 		janela.drawText("Valor do Dados: ",1045, 90, preto,arial);
 		janela.drawText("id "+jogadorInfo.getIdJogador() +jogadorInfo.getNome(),1045, 60, red,arial);
 		janela.drawText("Jogador da Vez",1045, 30, preto,arial);
 		
 		janela.drawText("Posicao Atual : "+ jogadorInfo.getMinhaPeca().getCasaAtual(),1045, 140, preto,arial);
-		//janela.drawText("Tipo : "+ casaAtual.getNome(),1050, 120, preto,arial);
+		if(casaAtual!=null)
+		janela.drawText("Tipo : "+ casaAtual.getClass().getSimpleName(),1050, 10, preto,arial);
 	}
 	
 	public void posicaoSpritePeca() {
@@ -143,6 +144,7 @@ public class TelaTabuleiroInfoGUI {
 	
 	
 	 public boolean rolarDadoJogador() {
+		 posicaoAnterior = jogadorInfo.getMinhaPeca().getCasaAtual();
 		 while(!keyBoard.keyDown(Keyboard.SPACE_KEY)) {
 			 System.out.println("Aperte o Space");
 		 }
@@ -155,6 +157,10 @@ public class TelaTabuleiroInfoGUI {
 	 
 	public void exibirTabuleiro(){
 		backGround.draw();
+	}
+	
+	public void fechaJanela() {
+		janela.exit();
 	}
 
 }

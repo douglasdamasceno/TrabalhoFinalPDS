@@ -10,11 +10,14 @@ public class CasaCobra extends AbstractCasa implements CasaEspecial{
 		this.casaDestino = casaDestino;
 	
 	}
-		@Override
+	
+	@Override
 	public void executarAcao(Peca peca) {
-		peca.setCasaAtual(casaDestino);
+		descer(peca);	
 	}
 
-	
+	public void descer(Peca peca) {
+		peca.setCasaAtual(casaDestino);
+	}
 	
 }

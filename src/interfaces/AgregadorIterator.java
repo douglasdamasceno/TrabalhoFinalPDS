@@ -6,6 +6,6 @@ import entidade.Jogador;
 
 public interface AgregadorIterator {
 	IteratorJogador criarInteratorJogador(ArrayList<Jogador> listaDeJogadores);
-
+	
 	
 }

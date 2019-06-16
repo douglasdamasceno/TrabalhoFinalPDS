@@ -1,11 +1,11 @@
 package entidade;
 
 import java.util.Random;
-//ok
+
 public class Dado {
 	private int valorFace;
 	private int qtdFaces;
-	//muda para qttd de dados só muitplicar por 6o qtd
+	
 	public Dado(int qtdFaces) {
 		this.qtdFaces= qtdFaces;
 	}

@@ -7,9 +7,10 @@ public class Jogador {
 	private String nome;
 	private Peca minhaPeca;
 	private int idJogador;
-	
+	private Dado dado;
 	
 	public Jogador(String nome,int idJogador) {
+		dado = new Dado(12);
 		this.nome = nome;
 		this.idJogador = idJogador;
 		this.minhaPeca = new Peca(idJogador);
@@ -22,11 +23,13 @@ public class Jogador {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
 	
 	public void avancarPeca(CasaEspecial novaCasa) {		
-		
 		novaCasa.executarAcao(minhaPeca);		
+	}
+	
+	public int lancarDados() {
+		return this.dado.lancarDado();
 	}
 	
 	

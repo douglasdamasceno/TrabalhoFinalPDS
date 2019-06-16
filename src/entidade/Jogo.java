@@ -2,23 +2,22 @@ package entidade;
 
 import java.util.ArrayList;
 
-import controladores.IteratorRodada;
+import interfaces.AgregadorIterator;
 import interfaces.CasaEspecial;
+import interfaces.IteratorJogador;
 
 public class Jogo {
 	
-	private IteratorRodada iteratorRodado;
+	private IteratorJogador iteratorRodado;
 	ArrayList<Jogador> listaDeJogadores;
 	private Tabuleiro meuTabuleiro = Tabuleiro.getInstance();
-	private AgregadorRodada agregadorRodada;
-	private Dado dado;
+	private AgregadorIterator agregadorRodada;
 	private int numeroGerado;
 	private CasaEspecial casaDaRodada;
 	
 	public Jogo() {
 		listaDeJogadores = new ArrayList<Jogador>();
 		agregadorRodada = new AgregadorRodada();
-		dado = new Dado(12);
 		numeroGerado = 0;
 	}
 	
@@ -29,17 +28,13 @@ public class Jogo {
 			listaDeJogadores.add(jogador);
 			i++;
 		}
-		iteratorRodado = agregadorRodada.criarInteratorJogador(listaDeJogadores);
+		iteratorRodado =  agregadorRodada.criarInteratorJogador(listaDeJogadores);
 		return true;
 	}
 	
 	public boolean JogadoresRodada() {
 	         Jogador jogadorVez = iteratorRodado.proximoJogador();
-	        
-	  
 	         this.avancarPeca(jogadorVez);
-	         
-	         
 	         if(jogadorVez.getMinhaPeca().getCasaAtual()>=100) {
 	        	return true;
 	         }
@@ -50,30 +45,23 @@ public class Jogo {
 		return iteratorRodado.jogadorAtual();
 	}
 	
-	public int lancarDados() {
-		return this.dado.lancarDado();
-	}
-	
+
 	public void avancarPeca(Jogador jogadoDaVez) {
-		int numero = this.lancarDados();
+		int numero = jogadoDaVez.lancarDados();
 		int novaPosicao = jogadoDaVez.getMinhaPeca().getCasaAtual() + numero;
-		
-		this.setNumeroGerado(numero);
-	
 		if(novaPosicao>=100) {
 			casaDaRodada = meuTabuleiro.getListaDeCasas().get(99);
 			jogadoDaVez.avancarPeca(casaDaRodada);
 		}else {
 			casaDaRodada = meuTabuleiro.getListaDeCasas().get(novaPosicao-1);
 			jogadoDaVez.avancarPeca(casaDaRodada);
-		
 		}
+		this.setNumeroGerado(numero);
 	}
-	
 	
 	public ArrayList<Jogador> getListaDeJogadores() {
 		return listaDeJogadores;
-	}	
+	}
 	
 	public CasaEspecial getCasaDaRodada() {
 		return casaDaRodada;

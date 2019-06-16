@@ -14,6 +14,10 @@ public class CasaCarta extends AbstractCasa implements CasaEspecial{
 
 	@Override
 	public void executarAcao(Peca peca) {
+		pegarCarta(peca);
+	}
+	
+	public void pegarCarta(Peca peca) {
 		int posicao = minhaCarta.informarNumero();	
 		peca.setCasaAtual(this.getNome()+ posicao);
 	}

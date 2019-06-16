@@ -15,11 +15,4 @@ public class Peca{
 	public void setCasaAtual(int casa) {
 		this.casaAtualNumero = casa;
 	}
-	
-	
-	@Override
-	public String toString() {
-		return "Peca [casaAtualNumero=" + casaAtualNumero + "]";
-	}
-	
 }
