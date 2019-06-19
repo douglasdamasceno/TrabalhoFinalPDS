@@ -1,9 +1,8 @@
-package controladores;
+package entidade;
 
 
 import java.util.ArrayList;
 
-import entidade.Jogador;
 import interfaces.IteratorJogador;
 
 public class IteratorRodada implements IteratorJogador{

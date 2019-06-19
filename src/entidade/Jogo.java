@@ -34,7 +34,7 @@ public class Jogo {
 	
 	public boolean JogadoresRodada() {
 	         Jogador jogadorVez = iteratorRodado.proximoJogador();
-	         this.avancarPeca(jogadorVez);
+	         this.informarCasa(jogadorVez);
 	         if(jogadorVez.getMinhaPeca().getCasaAtual()>=100) {
 	        	return true;
 	         }
@@ -46,7 +46,7 @@ public class Jogo {
 	}
 	
 
-	public void avancarPeca(Jogador jogadoDaVez) {
+	public void informarCasa(Jogador jogadoDaVez) {
 		int numero = jogadoDaVez.lancarDados();
 		int novaPosicao = jogadoDaVez.getMinhaPeca().getCasaAtual() + numero;
 		if(novaPosicao>=100) {

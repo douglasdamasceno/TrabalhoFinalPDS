@@ -12,7 +12,9 @@ public class TelaFimJogoConsole {
 		System.out.println("Valor dos Dados: "+numero);
 		System.out.println("Nova Posicao : 100");
 		System.out.println("Tipo: Casa");
-		System.out.println("Campeao do Jogador "+ jogador.getNome());
+		System.out.println("================================================");
+		System.out.println("Jogador Campeao eh "+ jogador.getNome());
+		System.out.println("================================================");
 	}
 	
 }

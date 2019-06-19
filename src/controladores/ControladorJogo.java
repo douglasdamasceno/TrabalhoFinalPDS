@@ -5,13 +5,12 @@ import java.util.ArrayList;
 
 import entidade.Jogo;
 import fronteiras.TelaJogadorInfoConsole;
-//import main.Teste.TelaTabuleiroInfoGUI;
 
 public class ControladorJogo {
 	
 	private Jogo jogo;
 	private TelaJogadorInfoConsole telaInfo;
-	//private TelaTabuleiroInfoGUI tabuleiroInfo;
+	
 	private static ControladorJogo controladorJogo;
 	
 	private ControladorJogo() {
@@ -37,8 +36,6 @@ public class ControladorJogo {
 	public void JogadoresRodada(int qtdJogadores) {
 		String comando ="";
 		boolean comandoSpace = true;
-		//divide em dois controle Console e GUI
-		//recebendo o jogo
 		do{	
 			if(comando.isEmpty() || comandoSpace) {
 				telaInfo.setJogador(jogo.jogadorDaVez());
@@ -51,54 +48,10 @@ public class ControladorJogo {
 				telaInfo.setNumeroAleatorio(jogo.getNumeroGerado());	
 				telaInfo.infoJogador();
 			}
-//		else if(comandoSpace) {
-//				tabuleiroInfo = TelaTabuleiroInfoGUI.getInstace();
-//				//
-//				tabuleiroInfo.exibirTabuleiro();
-//				
-//				//iniciar pecas aqui pegando a qttd de jogadores
-//				tabuleiroInfo.inicializarPecasJogadores(qtdJogadores);
-//				//tabuleiroInfo.exibirPecasJogadores();
-//				
-//				//set para tela
-//				tabuleiroInfo.setJogadorInfo(jogo.jogadorDaVez());
-//				tabuleiroInfo.setCasaAtual(jogo.getCasaDaRodada());
-//				tabuleiroInfo.setValorDoDado(jogo.getNumeroGerado());
-//				
-//				
-//				tabuleiroInfo.posicaoSpritePeca();
-//				//melhorou
-//				
-//				tabuleiroInfo.inforJogador();
-//				tabuleiroInfo.exibirPecasJogadores();
-//				
-//				
-//				tabuleiroInfo.atualizarTabuleiro();
-//				
-//				if(jogo.JogadoresRodada()) {
-//					System.out.println("Fim de Jogo");
-//					tabuleiroInfo.fechaJanela();
-//					break;
-//				}
-//				
-//				
-//				comandoSpace = tabuleiroInfo.rolarDadoJogador();
-//				//sei la
-//				//tabuleiroInfo.atualizarTabuleiro();
-//				
-//			}
 		}while(comando.isEmpty() || comandoSpace);
 			
-		
 				
 	}
 
-	
-
-
-	
-	
-	
-	
 	
 }

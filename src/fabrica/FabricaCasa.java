@@ -12,7 +12,6 @@ public class FabricaCasa implements AbstractFabrica{
 	@Override
 	public CasaEspecial criarCasa(int tipo) {
 		CasaEspecial casa = null;
-		//casas escadas
 		if(tipo==3 || tipo==6 || tipo==14 || tipo==27 || tipo==39 || tipo==41 || tipo==69 || tipo==89) {
 			if(tipo==3) {
 				casa = new CasaEscada(tipo,37);
@@ -31,8 +30,7 @@ public class FabricaCasa implements AbstractFabrica{
 			}else if(tipo==89) {
 				casa = new CasaEscada(tipo,91);
 			}
-		}//casas cobras
-		else if(tipo==15 || tipo==42 || tipo==49 || tipo==57 || tipo==75 || tipo==88 || tipo==97) {
+		}else if(tipo==15 || tipo==42 || tipo==49 || tipo==57 || tipo==75 || tipo==88 || tipo==97) {
 			if(tipo==15) {
 				casa = new CasaCobra(tipo,9);
 			}else if(tipo==42) {
@@ -48,15 +46,11 @@ public class FabricaCasa implements AbstractFabrica{
 			}else if(tipo==97) {
 				casa = new CasaCobra(tipo,65);
 			}
-		}//casas cartas
-		else if(tipo==4 || tipo==21 || tipo==26 || tipo==52 || tipo==72 || tipo==80 || tipo==86){
+		}else if(tipo==4 || tipo==21 || tipo==26 || tipo==52 || tipo==72 || tipo==80 || tipo==86){
 				casa = new CasaCarta(tipo);
-		}
-		else {
+		}else {
 			casa = new Casa(tipo);
 		}
 		return casa;
 	}
-	
-	
 }

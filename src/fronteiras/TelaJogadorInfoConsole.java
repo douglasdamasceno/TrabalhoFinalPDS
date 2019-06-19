@@ -38,7 +38,7 @@ public class TelaJogadorInfoConsole {
 		}else {
 			System.out.println("Nova Posicao: "+ (numeroAleatorio+ posicaoAnterior));
 			System.out.println("Tipo: " + casa.getClass().getSimpleName());
-			System.out.println("Execacao da Acao da Casa ...");
+			System.out.println("Execacao da Acao da "+casa.getClass().getSimpleName()+" ...");
 			System.out.println("Posicao Final: "+ jogador.getMinhaPeca().getCasaAtual());
 		}
 		System.out.println("-------------------------------------------------------");

@@ -2,7 +2,6 @@ package entidade;
 
 import java.util.ArrayList;
 
-import controladores.IteratorRodada;
 import interfaces.AgregadorIterator;
 import interfaces.IteratorJogador;
 

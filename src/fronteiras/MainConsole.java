@@ -10,5 +10,3 @@ public class MainConsole {
 				
 	}
 }
-//observe  com controle de evento
-

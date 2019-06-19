@@ -21,8 +21,11 @@ public class TelaInicialConsole {
 		String operacao = entrada.nextLine();
 		if(operacao.equals("1")) {
 			qtdDeJogadores();
-		}else {
+		}else if(operacao.equals("0")){
 			System.out.println("Jogo encerrado!");
+		}else {
+			System.out.println("Valor invalido!");
+			iniciarJogo();
 		}
 		
 	}
@@ -30,13 +33,21 @@ public class TelaInicialConsole {
 		System.out.println("Digite a qtd de Jogadores: ");
 		entrada = new Scanner(System.in);
 		String operacao = entrada.nextLine();
-		int valor = Integer.parseInt(operacao);
-		if(valor==1) {
-			System.out.println("Não é possivel jogar com apenas 1 jogador");
+		try {
+			int valor = Integer.parseInt(operacao);
+			if(valor==1) {
+				System.out.println("Não é possivel jogar com apenas 1 jogador");
+				qtdDeJogadores();
+			}else if(valor>1 && valor<=4){
+				informarNomes(valor);
+			}else {
+				System.out.println("Valor Invalido!!");
+				qtdDeJogadores();
+			}
+		}catch (Exception e) {
+			System.out.println("Valor invalido");
 			qtdDeJogadores();
-		}else if(valor>1 && valor<=4){
-			informarNomes(valor);
-		}	
+		}
 	}
 	void informarNomes(int qtdJogadores) {
 		int i =0;
